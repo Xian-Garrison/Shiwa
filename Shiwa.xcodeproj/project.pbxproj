@@ -30,6 +30,13 @@
 		90001C711B66BADD00E4F6D7 /* signup_signup_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C611B66BADD00E4F6D7 /* signup_signup_btn.png */; };
 		90001C721B66BADD00E4F6D7 /* verify_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C621B66BADD00E4F6D7 /* verify_btn.png */; };
 		90001C731B66BADD00E4F6D7 /* verify_nav_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C631B66BADD00E4F6D7 /* verify_nav_bar.png */; };
+		90001C781B676A8800E4F6D7 /* Main_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C761B676A8800E4F6D7 /* Main_logo.png */; };
+		90001C791B676A8800E4F6D7 /* Main_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C771B676A8800E4F6D7 /* Main_title.png */; };
+		90001C7B1B6774E200E4F6D7 /* login_phone_countrynum.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C7A1B6774E200E4F6D7 /* login_phone_countrynum.png */; };
+		90001C7F1B67766A00E4F6D7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C7E1B67766A00E4F6D7 /* LoginViewController.m */; };
+		90001C831B67802C00E4F6D7 /* ForgotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C821B67802C00E4F6D7 /* ForgotViewController.m */; };
+		90001C851B6780A100E4F6D7 /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C841B6780A100E4F6D7 /* back_btn.png */; };
+		90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C881B67826600E4F6D7 /* ForgotVerifyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +79,16 @@
 		90001C611B66BADD00E4F6D7 /* signup_signup_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup_signup_btn.png; sourceTree = "<group>"; };
 		90001C621B66BADD00E4F6D7 /* verify_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verify_btn.png; sourceTree = "<group>"; };
 		90001C631B66BADD00E4F6D7 /* verify_nav_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verify_nav_bar.png; sourceTree = "<group>"; };
+		90001C761B676A8800E4F6D7 /* Main_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_logo.png; sourceTree = "<group>"; };
+		90001C771B676A8800E4F6D7 /* Main_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_title.png; sourceTree = "<group>"; };
+		90001C7A1B6774E200E4F6D7 /* login_phone_countrynum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_phone_countrynum.png; sourceTree = "<group>"; };
+		90001C7D1B67766A00E4F6D7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ViewControllers/LoginViewController/LoginViewController.h; sourceTree = "<group>"; };
+		90001C7E1B67766A00E4F6D7 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ViewControllers/LoginViewController/LoginViewController.m; sourceTree = "<group>"; };
+		90001C811B67802C00E4F6D7 /* ForgotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotViewController.h; path = ViewControllers/ForgotViewController/ForgotViewController.h; sourceTree = "<group>"; };
+		90001C821B67802C00E4F6D7 /* ForgotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotViewController.m; path = ViewControllers/ForgotViewController/ForgotViewController.m; sourceTree = "<group>"; };
+		90001C841B6780A100E4F6D7 /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
+		90001C871B67826600E4F6D7 /* ForgotVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotVerifyViewController.h; path = ViewControllers/ForgotVerifyViewController/ForgotVerifyViewController.h; sourceTree = "<group>"; };
+		90001C881B67826600E4F6D7 /* ForgotVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotVerifyViewController.m; path = ViewControllers/ForgotVerifyViewController/ForgotVerifyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,13 +130,8 @@
 		90001C2C1B66B8BE00E4F6D7 /* Shiwa */ = {
 			isa = PBXGroup;
 			children = (
-				90001C311B66B8BE00E4F6D7 /* AppDelegate.h */,
-				90001C321B66B8BE00E4F6D7 /* AppDelegate.m */,
-				90001C341B66B8BE00E4F6D7 /* ViewController.h */,
-				90001C351B66B8BE00E4F6D7 /* ViewController.m */,
 				90001C371B66B8BF00E4F6D7 /* Main.storyboard */,
-				90001C3A1B66B8BF00E4F6D7 /* Images.xcassets */,
-				90001C3C1B66B8BF00E4F6D7 /* LaunchScreen.xib */,
+				90001C741B67696500E4F6D7 /* ViewControllers */,
 				90001C531B66BADD00E4F6D7 /* Images */,
 				90001C2D1B66B8BE00E4F6D7 /* Supporting Files */,
 			);
@@ -129,6 +141,10 @@
 		90001C2D1B66B8BE00E4F6D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90001C3A1B66B8BF00E4F6D7 /* Images.xcassets */,
+				90001C311B66B8BE00E4F6D7 /* AppDelegate.h */,
+				90001C321B66B8BE00E4F6D7 /* AppDelegate.m */,
+				90001C3C1B66B8BF00E4F6D7 /* LaunchScreen.xib */,
 				90001C2E1B66B8BE00E4F6D7 /* Info.plist */,
 				90001C2F1B66B8BE00E4F6D7 /* main.m */,
 			);
@@ -155,6 +171,7 @@
 		90001C531B66BADD00E4F6D7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				90001C841B6780A100E4F6D7 /* back_btn.png */,
 				90001C541B66BADD00E4F6D7 /* baby_complete_btn.png */,
 				90001C551B66BADD00E4F6D7 /* baby_nav_bar.png */,
 				90001C561B66BADD00E4F6D7 /* baby_notification.png */,
@@ -163,8 +180,11 @@
 				90001C591B66BADD00E4F6D7 /* login_divide_bar.png */,
 				90001C5A1B66BADD00E4F6D7 /* login_login_btn.png */,
 				90001C5B1B66BADD00E4F6D7 /* login_nav_bar.png */,
+				90001C7A1B6774E200E4F6D7 /* login_phone_countrynum.png */,
 				90001C5C1B66BADD00E4F6D7 /* login_wechat_btn.png */,
 				90001C5D1B66BADD00E4F6D7 /* login_weibo_btn.png */,
+				90001C761B676A8800E4F6D7 /* Main_logo.png */,
+				90001C771B676A8800E4F6D7 /* Main_title.png */,
 				90001C5E1B66BADD00E4F6D7 /* Main_signin_btn.png */,
 				90001C5F1B66BADD00E4F6D7 /* Main_signup_btn.png */,
 				90001C601B66BADD00E4F6D7 /* signup_nav_bar.png */,
@@ -173,6 +193,53 @@
 				90001C631B66BADD00E4F6D7 /* verify_nav_bar.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		90001C741B67696500E4F6D7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				90001C861B67824900E4F6D7 /* ForgotVerifyViewController */,
+				90001C801B67801300E4F6D7 /* ForgotViewController */,
+				90001C7C1B67764400E4F6D7 /* LoginViewController */,
+				90001C751B67697000E4F6D7 /* MainViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		90001C751B67697000E4F6D7 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90001C341B66B8BE00E4F6D7 /* ViewController.h */,
+				90001C351B66B8BE00E4F6D7 /* ViewController.m */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		90001C7C1B67764400E4F6D7 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90001C7D1B67766A00E4F6D7 /* LoginViewController.h */,
+				90001C7E1B67766A00E4F6D7 /* LoginViewController.m */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		90001C801B67801300E4F6D7 /* ForgotViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90001C811B67802C00E4F6D7 /* ForgotViewController.h */,
+				90001C821B67802C00E4F6D7 /* ForgotViewController.m */,
+			);
+			name = ForgotViewController;
+			sourceTree = "<group>";
+		};
+		90001C861B67824900E4F6D7 /* ForgotVerifyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90001C871B67826600E4F6D7 /* ForgotVerifyViewController.h */,
+				90001C881B67826600E4F6D7 /* ForgotVerifyViewController.m */,
+			);
+			name = ForgotVerifyViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,15 +322,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90001C851B6780A100E4F6D7 /* back_btn.png in Resources */,
 				90001C6F1B66BADD00E4F6D7 /* Main_signup_btn.png in Resources */,
 				90001C391B66B8BF00E4F6D7 /* Main.storyboard in Resources */,
+				90001C7B1B6774E200E4F6D7 /* login_phone_countrynum.png in Resources */,
 				90001C6E1B66BADD00E4F6D7 /* Main_signin_btn.png in Resources */,
 				90001C701B66BADD00E4F6D7 /* signup_nav_bar.png in Resources */,
+				90001C791B676A8800E4F6D7 /* Main_title.png in Resources */,
 				90001C711B66BADD00E4F6D7 /* signup_signup_btn.png in Resources */,
 				90001C641B66BADD00E4F6D7 /* baby_complete_btn.png in Resources */,
 				90001C661B66BADD00E4F6D7 /* baby_notification.png in Resources */,
 				90001C721B66BADD00E4F6D7 /* verify_btn.png in Resources */,
 				90001C6D1B66BADD00E4F6D7 /* login_weibo_btn.png in Resources */,
+				90001C781B676A8800E4F6D7 /* Main_logo.png in Resources */,
 				90001C731B66BADD00E4F6D7 /* verify_nav_bar.png in Resources */,
 				90001C3E1B66B8BF00E4F6D7 /* LaunchScreen.xib in Resources */,
 				90001C6B1B66BADD00E4F6D7 /* login_nav_bar.png in Resources */,
@@ -291,7 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90001C7F1B67766A00E4F6D7 /* LoginViewController.m in Sources */,
 				90001C361B66B8BE00E4F6D7 /* ViewController.m in Sources */,
+				90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */,
+				90001C831B67802C00E4F6D7 /* ForgotViewController.m in Sources */,
 				90001C331B66B8BE00E4F6D7 /* AppDelegate.m in Sources */,
 				90001C301B66B8BE00E4F6D7 /* main.m in Sources */,
 			);
@@ -371,7 +445,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -408,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -419,7 +493,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Shiwa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -429,7 +505,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = Shiwa/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -488,6 +566,7 @@
 				90001C4F1B66B8BF00E4F6D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90001C501B66B8BF00E4F6D7 /* Build configuration list for PBXNativeTarget "ShiwaTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +575,7 @@
 				90001C521B66B8BF00E4F6D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

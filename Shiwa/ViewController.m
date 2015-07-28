@@ -16,7 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNeedsStatusBarAppearanceUpdate];
     // Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,4 +31,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onBtnSignin:(id)sender {
+    [self performSegueWithIdentifier:@"main2Login" sender:nil];
+}
+
+- (IBAction)onBtnSignup:(id)sender {
+}
 @end

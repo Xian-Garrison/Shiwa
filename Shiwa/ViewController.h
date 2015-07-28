@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)onBtnSignin:(id)sender;
+- (IBAction)onBtnSignup:(id)sender;
 
 @end
 
