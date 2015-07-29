@@ -36,5 +36,6 @@
 }
 
 - (IBAction)onBtnSignup:(id)sender {
+    [self performSegueWithIdentifier:@"main2Signup" sender:nil];
 }
 @end

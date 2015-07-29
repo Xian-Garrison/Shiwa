@@ -36,6 +36,11 @@
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
 
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textFieldChange:)
+                                                 name:UITextFieldTextDidChangeNotification
+                                               object:nil];
+
 }
 
 //to change the status bar color to white
@@ -86,6 +91,19 @@
 }
 
 #pragma mark - KeyBoard notifications
+- (void)textFieldChange:(id)notification {
+    NSString *verifyCode = self.m_VerifyCode.text;
+    
+    if (![verifyCode isEqualToString:@""])
+    {
+        self.m_VerifyButton.alpha = 1;
+    }
+    else
+    {
+        self.m_VerifyButton.alpha = 0.5;
+    }
+}
+
 - (void)keyboardWillShow:(NSNotification*)notify {
     
     [self animationView:-90];

@@ -20,6 +20,7 @@
     //to change the status bar color to white
     [self setNeedsStatusBarAppearanceUpdate];
     
+    //keyboard
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -34,6 +35,11 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textFieldChange:)
+                                                 name:UITextFieldTextDidChangeNotification
                                                object:nil];
 }
 
@@ -69,7 +75,9 @@
 }
 
 - (IBAction)onSignupBtn:(id)sender {
+    [self performSegueWithIdentifier:@"login2Signup" sender:nil];
 }
+
 
 -(void)dismissKeyboard {
     [self.view endEditing:YES];
@@ -90,6 +98,20 @@
 }
 
 #pragma mark - KeyBoard notifications
+- (void)textFieldChange:(id)notification {
+    NSString *phoneNum = self.m_PhoneNumber.text;
+    NSString *password = self.m_Password.text;
+    
+    if (![phoneNum isEqualToString:@""] && ![password isEqualToString:@""])
+    {
+        self.m_LoginButton.alpha = 1;
+    }
+    else
+    {
+        self.m_LoginButton.alpha = 0.5;
+    }
+}
+
 - (void)keyboardWillShow:(NSNotification*)notify {
     
     [self animationView:-90];

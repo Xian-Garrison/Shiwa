@@ -1,25 +1,26 @@
 //
-//  ForgotViewController.m
+//  SignupViewController.m
 //  Shiwa
 //
-//  Created by Xian on 7/28/15.
+//  Created by Xian on 7/29/15.
 //  Copyright (c) 2015 Xian. All rights reserved.
 //
 
-#import "ForgotViewController.h"
+#import "SignupViewController.h"
 
-@interface ForgotViewController ()
+@interface SignupViewController ()
 
 @end
 
-@implementation ForgotViewController
+@implementation SignupViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //to change the status bar color to white
     [self setNeedsStatusBarAppearanceUpdate];
-
+    
+    //keyboard
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -42,6 +43,11 @@
                                                object:nil];
 }
 
+- (void)showError:(NSString *)message {
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:message delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
+
 //to change the status bar color to white
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
@@ -52,20 +58,22 @@
 {
     //to change the border style of input boxes to Round Rect
     self.m_PhoneNumber.borderStyle = UITextBorderStyleRoundedRect;
+    self.m_Password.borderStyle = UITextBorderStyleRoundedRect;
     self.m_phoneCountryNum.layer.zPosition = 1;
     [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (IBAction)onSendSMSBtn:(id)sender {
-    [self performSegueWithIdentifier:@"forgot2Verify" sender:nil];
+    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onBackBtn:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)onSignupBtn:(id)sender {
+    [self performSegueWithIdentifier:@"signup2Verify" sender:nil];
 }
 
 -(void)dismissKeyboard {
@@ -89,14 +97,15 @@
 #pragma mark - KeyBoard notifications
 - (void)textFieldChange:(id)notification {
     NSString *phoneNum = self.m_PhoneNumber.text;
+    NSString *password = self.m_Password.text;
     
-    if (![phoneNum isEqualToString:@""])
+    if (![phoneNum isEqualToString:@""] && ![password isEqualToString:@""])
     {
-        self.m_SendSMSButton.alpha = 1;
+        self.m_SignupButton.alpha = 1;
     }
     else
     {
-        self.m_SendSMSButton.alpha = 0.5;
+        self.m_SignupButton.alpha = 0.5;
     }
 }
 
@@ -111,6 +120,9 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.m_PhoneNumber) {
+        [self.m_Password becomeFirstResponder];
+    }
+    else if (textField == self.m_Password) {
         [textField resignFirstResponder];
     }
     

@@ -1,25 +1,25 @@
 //
-//  ForgotViewController.m
+//  SignupVerifyViewController.m
 //  Shiwa
 //
-//  Created by Xian on 7/28/15.
+//  Created by Xian on 7/29/15.
 //  Copyright (c) 2015 Xian. All rights reserved.
 //
 
-#import "ForgotViewController.h"
+#import "SignupVerifyViewController.h"
 
-@interface ForgotViewController ()
+@interface SignupVerifyViewController ()
 
 @end
 
-@implementation ForgotViewController
+@implementation SignupVerifyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     //to change the status bar color to white
     [self setNeedsStatusBarAppearanceUpdate];
-
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
@@ -35,7 +35,7 @@
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
-
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(textFieldChange:)
                                                  name:UITextFieldTextDidChangeNotification
@@ -51,21 +51,25 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     //to change the border style of input boxes to Round Rect
-    self.m_PhoneNumber.borderStyle = UITextBorderStyleRoundedRect;
-    self.m_phoneCountryNum.layer.zPosition = 1;
+    self.m_VerifyButton.highlighted = NO;
+    self.m_VerifyButton.selected = NO;
+    
+    self.m_ResendLabel.hidden = NO;
+    self.m_ResendButton.hidden = YES;
+    self.m_VerifyCode.borderStyle = UITextBorderStyleRoundedRect;
     [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-}
-
-- (IBAction)onSendSMSBtn:(id)sender {
-    [self performSegueWithIdentifier:@"forgot2Verify" sender:nil];
+    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)onBackBtn:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)onVerifyBtn:(id)sender {
 }
 
 -(void)dismissKeyboard {
@@ -88,15 +92,15 @@
 
 #pragma mark - KeyBoard notifications
 - (void)textFieldChange:(id)notification {
-    NSString *phoneNum = self.m_PhoneNumber.text;
+    NSString *verifyCode = self.m_VerifyCode.text;
     
-    if (![phoneNum isEqualToString:@""])
+    if (![verifyCode isEqualToString:@""])
     {
-        self.m_SendSMSButton.alpha = 1;
+        self.m_VerifyButton.alpha = 1;
     }
     else
     {
-        self.m_SendSMSButton.alpha = 0.5;
+        self.m_VerifyButton.alpha = 0.5;
     }
 }
 
@@ -110,7 +114,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField == self.m_PhoneNumber) {
+    if (textField == self.m_VerifyCode) {
         [textField resignFirstResponder];
     }
     

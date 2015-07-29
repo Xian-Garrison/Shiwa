@@ -37,6 +37,9 @@
 		90001C831B67802C00E4F6D7 /* ForgotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C821B67802C00E4F6D7 /* ForgotViewController.m */; };
 		90001C851B6780A100E4F6D7 /* back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C841B6780A100E4F6D7 /* back_btn.png */; };
 		90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C881B67826600E4F6D7 /* ForgotVerifyViewController.m */; };
+		90001C8D1B68F2C700E4F6D7 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C8C1B68F2C700E4F6D7 /* SignupViewController.m */; };
+		90001C911B68F5F800E4F6D7 /* signup_verify_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C901B68F5F800E4F6D7 /* signup_verify_btn.png */; };
+		90001C951B69019200E4F6D7 /* SignupVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C941B69019200E4F6D7 /* SignupVerifyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,11 @@
 		90001C841B6780A100E4F6D7 /* back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_btn.png; sourceTree = "<group>"; };
 		90001C871B67826600E4F6D7 /* ForgotVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ForgotVerifyViewController.h; path = ViewControllers/ForgotVerifyViewController/ForgotVerifyViewController.h; sourceTree = "<group>"; };
 		90001C881B67826600E4F6D7 /* ForgotVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotVerifyViewController.m; path = ViewControllers/ForgotVerifyViewController/ForgotVerifyViewController.m; sourceTree = "<group>"; };
+		90001C8B1B68F2C700E4F6D7 /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupViewController.h; path = ViewControllers/SignupViewController/SignupViewController.h; sourceTree = "<group>"; };
+		90001C8C1B68F2C700E4F6D7 /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupViewController.m; path = ViewControllers/SignupViewController/SignupViewController.m; sourceTree = "<group>"; };
+		90001C901B68F5F800E4F6D7 /* signup_verify_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup_verify_btn.png; sourceTree = "<group>"; };
+		90001C931B69019200E4F6D7 /* SignupVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignupVerifyViewController.h; path = ViewControllers/SignupVerifyViewController/SignupVerifyViewController.h; sourceTree = "<group>"; };
+		90001C941B69019200E4F6D7 /* SignupVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignupVerifyViewController.m; path = ViewControllers/SignupVerifyViewController/SignupVerifyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,7 @@
 				90001C5F1B66BADD00E4F6D7 /* Main_signup_btn.png */,
 				90001C601B66BADD00E4F6D7 /* signup_nav_bar.png */,
 				90001C611B66BADD00E4F6D7 /* signup_signup_btn.png */,
+				90001C901B68F5F800E4F6D7 /* signup_verify_btn.png */,
 				90001C621B66BADD00E4F6D7 /* verify_btn.png */,
 				90001C631B66BADD00E4F6D7 /* verify_nav_bar.png */,
 			);
@@ -198,6 +207,8 @@
 		90001C741B67696500E4F6D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				90001C921B69017800E4F6D7 /* SignupVerifyViewController */,
+				90001C8A1B68F2B100E4F6D7 /* SignupViewController */,
 				90001C861B67824900E4F6D7 /* ForgotVerifyViewController */,
 				90001C801B67801300E4F6D7 /* ForgotViewController */,
 				90001C7C1B67764400E4F6D7 /* LoginViewController */,
@@ -240,6 +251,24 @@
 				90001C881B67826600E4F6D7 /* ForgotVerifyViewController.m */,
 			);
 			name = ForgotVerifyViewController;
+			sourceTree = "<group>";
+		};
+		90001C8A1B68F2B100E4F6D7 /* SignupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90001C8B1B68F2C700E4F6D7 /* SignupViewController.h */,
+				90001C8C1B68F2C700E4F6D7 /* SignupViewController.m */,
+			);
+			name = SignupViewController;
+			sourceTree = "<group>";
+		};
+		90001C921B69017800E4F6D7 /* SignupVerifyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90001C931B69019200E4F6D7 /* SignupVerifyViewController.h */,
+				90001C941B69019200E4F6D7 /* SignupVerifyViewController.m */,
+			);
+			name = SignupVerifyViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +356,7 @@
 				90001C391B66B8BF00E4F6D7 /* Main.storyboard in Resources */,
 				90001C7B1B6774E200E4F6D7 /* login_phone_countrynum.png in Resources */,
 				90001C6E1B66BADD00E4F6D7 /* Main_signin_btn.png in Resources */,
+				90001C911B68F5F800E4F6D7 /* signup_verify_btn.png in Resources */,
 				90001C701B66BADD00E4F6D7 /* signup_nav_bar.png in Resources */,
 				90001C791B676A8800E4F6D7 /* Main_title.png in Resources */,
 				90001C711B66BADD00E4F6D7 /* signup_signup_btn.png in Resources */,
@@ -363,10 +393,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90001C7F1B67766A00E4F6D7 /* LoginViewController.m in Sources */,
+				90001C951B69019200E4F6D7 /* SignupVerifyViewController.m in Sources */,
 				90001C361B66B8BE00E4F6D7 /* ViewController.m in Sources */,
 				90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */,
 				90001C831B67802C00E4F6D7 /* ForgotViewController.m in Sources */,
 				90001C331B66B8BE00E4F6D7 /* AppDelegate.m in Sources */,
+				90001C8D1B68F2C700E4F6D7 /* SignupViewController.m in Sources */,
 				90001C301B66B8BE00E4F6D7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Shiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -506,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Shiwa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
