@@ -70,6 +70,7 @@
 }
 
 - (IBAction)onVerifyBtn:(id)sender {
+    [self performSegueWithIdentifier:@"verify2Baby" sender:nil];
 }
 
 -(void)dismissKeyboard {
@@ -106,7 +107,7 @@
 
 - (void)keyboardWillShow:(NSNotification*)notify {
     
-    [self animationView:-90];
+    [self animationView:0];
 }
 
 - (void)keyboardWillHide:(NSNotification*)notify {
