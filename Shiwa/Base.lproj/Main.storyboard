@@ -186,6 +186,7 @@
                         <outlet property="m_phoneCountryNum" destination="Bwg-cm-bEt" id="QeT-MZ-0pb"/>
                         <segue destination="CwR-Ux-Iwy" kind="push" identifier="login2Forgot" id="1GH-hd-aXZ"/>
                         <segue destination="f2w-9v-6fu" kind="push" identifier="login2Signup" id="yqO-vK-XkD"/>
+                        <segue destination="qxN-PT-tCA" kind="push" identifier="login2Home" id="kSD-P8-3iK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GM3-yn-hjP" sceneMemberID="firstResponder"/>
@@ -754,6 +755,9 @@
                                                 <state key="normal" image="signup_verify_btn.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onSignupBtn:" destination="1Sz-GM-N3y" eventType="touchUpInside" id="jGW-pe-T5I"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -781,11 +785,317 @@
                         <outlet property="month_comboBox" destination="KeD-U9-4MV" id="bXa-8V-70p"/>
                         <outlet property="provice_comboBox" destination="A0I-VE-o3Z" id="5fe-MP-dbB"/>
                         <outlet property="year_comboBox" destination="hey-qZ-5BM" id="blT-O1-3l3"/>
+                        <segue destination="qxN-PT-tCA" kind="push" identifier="signup2Home" id="lKN-5m-Id3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UvH-kJ-ugp" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1710" y="1226"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fQ1-Kx-VIy">
+            <objects>
+                <tabBarController id="qxN-PT-tCA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZoL-uS-M9N"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Jzj-3x-2Sd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="41L-c3-zfu" kind="relationship" relationship="viewControllers" id="iZb-1V-x05"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AMn-eH-D5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2254" y="1226"/>
+        </scene>
+        <!--Growth Record View Controller-->
+        <scene sceneID="lia-DO-9xe">
+            <objects>
+                <viewController id="41L-c3-zfu" userLabel="Growth Record View Controller" customClass="GrowthRecordViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cMF-hm-qtc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="LJV-BP-oK3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成长记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GnD-lO-CGK">
+                                        <rect key="frame" x="128" y="29" width="65" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ELj-oH-FhY" userLabel="TreeButton">
+                                        <rect key="frame" x="11" y="25" width="23" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="profile_tree_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V31-ZA-0sp" userLabel="TreeButton">
+                                        <rect key="frame" x="286" y="25" width="23" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="profile_search_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" id="pQ7-rJ-86d">
+                                <rect key="frame" x="0.0" y="55" width="320" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background.png" id="BZ3-Ly-yFu">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成长记  Julian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jwu-rz-y1Y">
+                                        <rect key="frame" x="113" y="124" width="107" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Julian 成长日记" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uAz-UO-J4s">
+                                        <rect key="frame" x="113" y="145" width="106" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="粉丝   58k" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9Au-eg-G4n">
+                                        <rect key="frame" x="113" y="199" width="64" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="杭州市" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B1t-px-zEd">
+                                        <rect key="frame" x="129" y="164" width="48" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_user_image.png" id="Dyl-eA-sGn">
+                                        <rect key="frame" x="15" y="129" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_location_image.png" id="tZJ-5s-AJP">
+                                        <rect key="frame" x="113" y="166" width="17" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="48 个月" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xke-El-CwX">
+                                        <rect key="frame" x="218" y="165" width="48" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_age_image.png" id="Fnw-1A-WUI">
+                                        <rect key="frame" x="202" y="167" width="17" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_divide_bar.png" id="U8D-wp-zai">
+                                        <rect key="frame" x="0.0" y="230" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_seperator.png" id="001-1p-cLy">
+                                        <rect key="frame" x="181" y="201" width="1" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="亲友团  183" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jKh-Y3-tmp">
+                                        <rect key="frame" x="195" y="199" width="71" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="dDY-1U-1Q2">
+                                <rect key="frame" x="0.0" y="286" width="320" height="442"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GrowthRecordCellID" rowHeight="504" id="0RE-VY-Hq6" userLabel="GrowthRecordCellID" customClass="GrowthRecordViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="504"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0RE-VY-Hq6" id="bHe-vR-rDP">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_timeline.png" id="ckL-2D-XbX">
+                                                    <rect key="frame" x="19" y="0.0" width="2" height="450"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_event_back.png" id="mKI-2Q-NX2">
+                                                    <rect key="frame" x="7" y="17" width="163" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fDX-Rh-ReU">
+                                                    <rect key="frame" x="34" y="20" width="90" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_rain_image.png" id="5Tb-Vi-Jdd">
+                                                    <rect key="frame" x="126" y="22" width="18" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_baby_mark.png" id="rph-rZ-KSy">
+                                                    <rect key="frame" x="5" y="114" width="27" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_baby_background.png" id="qzW-HR-LZJ">
+                                                    <rect key="frame" x="37" y="61" width="273" height="206"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_baby_image.png" id="HfP-HZ-Zjw">
+                                                    <rect key="frame" x="48" y="71" width="102" height="102"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o7A-mJ-E7A">
+                                                    <rect key="frame" x="48" y="181" width="118" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E2O-4j-1nY">
+                                                    <rect key="frame" x="48" y="203" width="38" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_seperator.png" id="pEf-6b-aXa">
+                                                    <rect key="frame" x="88" y="205" width="1" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AUV-ZS-FXM">
+                                                    <rect key="frame" x="97" y="203" width="64" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_divide_bar.png" id="oGY-IF-sfP">
+                                                    <rect key="frame" x="37" y="232" width="273" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_seperator.png" id="hDy-gy-XoI">
+                                                    <rect key="frame" x="127" y="241" width="1" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_seperator.png" id="AqM-zv-15k">
+                                                    <rect key="frame" x="222" y="241" width="1" height="17"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fbV-4v-seZ" userLabel="Forward_button">
+                                                    <rect key="frame" x="48" y="232" width="71" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="转发" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tBl-Rp-Q4C">
+                                                    <rect key="frame" x="81" y="238" width="32" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_forward_image.png" id="jUJ-9c-JTd">
+                                                    <rect key="frame" x="54" y="238" width="23" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kfW-93-pV3" userLabel="Forward_button">
+                                                    <rect key="frame" x="138" y="234" width="71" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="评论" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dsh-an-F34">
+                                                    <rect key="frame" x="172" y="238" width="32" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_comment_image.png" id="kqf-o2-35u">
+                                                    <rect key="frame" x="145" y="238" width="23" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dEL-iP-N9u" userLabel="Forward_button">
+                                                    <rect key="frame" x="228" y="234" width="71" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赞" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="S8z-Fj-uAf">
+                                                    <rect key="frame" x="270" y="238" width="19" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="13"/>
+                                                    <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_like_image.png" id="U7t-is-x3x">
+                                                    <rect key="frame" x="241" y="238" width="23" height="23"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZUN-1R-hpl">
+                                                    <rect key="frame" x="276" y="71" width="24" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="profile_lock_image.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.12549019610000001" green="0.12549019610000001" blue="0.1647058824" alpha="0.0" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="m_babyDescription" destination="o7A-mJ-E7A" id="f3r-CE-hSu"/>
+                                            <outlet property="m_babyImage" destination="HfP-HZ-Zjw" id="eH1-oW-mdB"/>
+                                            <outlet property="m_datetemperature" destination="fDX-Rh-ReU" id="4BH-xV-tbR"/>
+                                            <outlet property="m_lockButton" destination="ZUN-1R-hpl" id="ADW-FG-ksy"/>
+                                            <outlet property="m_postPlace" destination="AUV-ZS-FXM" id="lHw-Db-lKk"/>
+                                            <outlet property="m_postTime" destination="E2O-4j-1nY" id="3B0-DS-6ph"/>
+                                            <outlet property="m_weatherImage" destination="5Tb-Vi-Jdd" id="myf-aw-bQl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="41L-c3-zfu" id="KHF-Yd-7p7"/>
+                                    <outlet property="delegate" destination="41L-c3-zfu" id="hFH-ij-ncf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="成長记" image="tab_record_btn.png" id="OnR-cY-vmB"/>
+                    <navigationItem key="navigationItem" id="312-ne-8bD"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="m_growthRecordTable" destination="dDY-1U-1Q2" id="vYq-Kc-CKH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iOt-e6-6Yw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2748" y="314"/>
         </scene>
     </scenes>
     <resources>
@@ -804,11 +1114,29 @@
         <image name="login_phone_countrynum.png" width="70" height="40"/>
         <image name="login_wechat_btn.png" width="315" height="45"/>
         <image name="login_weibo_btn.png" width="315" height="47"/>
+        <image name="profile_age_image.png" width="20" height="20"/>
+        <image name="profile_baby_background.png" width="322" height="245"/>
+        <image name="profile_baby_image.png" width="120" height="120"/>
+        <image name="profile_baby_mark.png" width="32" height="15"/>
+        <image name="profile_background.png" width="375" height="218"/>
+        <image name="profile_comment_image.png" width="28" height="28"/>
+        <image name="profile_event_back.png" width="191" height="32"/>
+        <image name="profile_forward_image.png" width="28" height="28"/>
         <image name="profile_image_back.png" width="131" height="131"/>
         <image name="profile_image_default.png" width="130" height="130"/>
+        <image name="profile_like_image.png" width="28" height="28"/>
+        <image name="profile_location_image.png" width="20" height="20"/>
+        <image name="profile_lock_image.png" width="30" height="30"/>
+        <image name="profile_rain_image.png" width="22" height="22"/>
+        <image name="profile_search_btn.png" width="28" height="28"/>
+        <image name="profile_seperator.png" width="1" height="20"/>
+        <image name="profile_timeline.png" width="2" height="693"/>
+        <image name="profile_tree_btn.png" width="27" height="27"/>
+        <image name="profile_user_image.png" width="97" height="97"/>
         <image name="signup_nav_bar.png" width="375" height="65"/>
         <image name="signup_signup_btn.png" width="315" height="46"/>
         <image name="signup_verify_btn.png" width="315" height="46"/>
+        <image name="tab_record_btn.png" width="22" height="22"/>
         <image name="verify_btn.png" width="315" height="46"/>
         <image name="verify_nav_bar.png" width="375" height="65"/>
     </resources>
@@ -819,5 +1147,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="yqO-vK-XkD"/>
+        <segue reference="lKN-5m-Id3"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *m_signupView;
 @property (strong, nonatomic) IBOutlet UITextField *m_babyName;
 @property (strong, nonatomic) IBOutlet UIButton *m_SignupButton;
+- (IBAction)onSignupBtn:(id)sender;
 
 @end

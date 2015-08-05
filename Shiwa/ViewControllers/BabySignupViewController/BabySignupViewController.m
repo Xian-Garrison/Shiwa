@@ -251,4 +251,8 @@
     
     return YES;
 }
+
+- (IBAction)onSignupBtn:(id)sender {
+    [self performSegueWithIdentifier:@"signup2Home" sender:nil];
+}
 @end

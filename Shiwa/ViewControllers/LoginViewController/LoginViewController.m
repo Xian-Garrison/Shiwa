@@ -68,6 +68,7 @@
 }
 
 - (IBAction)onLoginBtn:(id)sender {
+    [self performSegueWithIdentifier:@"login2Home" sender:nil];
 }
 
 - (IBAction)onForgotBtn:(id)sender {
