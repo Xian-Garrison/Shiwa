@@ -19,6 +19,13 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     // Do any additional setup after loading the view.
+    
+    [self.m_babyName setText:@"成长记  Julian"];
+    [self.m_babyTitle setText:@"Julian 成长日记"];
+    [self.m_babyPos setText:@"杭州市"];
+    [self.m_babyAge setText:@"48 个月"];
+    [self.m_babyFans setText:@"粉丝   58k"];
+    [self.m_babyFriends setText:@"亲友团  183"];
 }
 
 //to change the status bar color to white
@@ -48,7 +55,7 @@
     
     GrowthRecordViewCell *growthRecordViewCell = (GrowthRecordViewCell *)[self.m_growthRecordTable dequeueReusableCellWithIdentifier:@"GrowthRecordCellID"];
     
-    if (indexPath.row == 1)
+    if (indexPath.row == 0)
     {
         [growthRecordViewCell.m_datetemperature setText:@"3 月 11 日   23˚"];
         [growthRecordViewCell.m_babyDescription setText:@"Julian 一岁照片回顾"];
@@ -56,7 +63,7 @@
         [growthRecordViewCell.m_postPlace setText:@"杭州市"];
         [growthRecordViewCell.m_weatherImage setImage:[UIImage imageNamed:@"profile_rain_image.png"]];
     }
-    else if (indexPath.row == 2)
+    else if (indexPath.row == 1)
     {
         [growthRecordViewCell.m_datetemperature setText:@"4 月 1 日   23˚"];
         [growthRecordViewCell.m_babyDescription setText:@"Julian 一岁照片回顾"];
@@ -64,7 +71,7 @@
         [growthRecordViewCell.m_postPlace setText:@"上海市"];
         [growthRecordViewCell.m_weatherImage setImage:[UIImage imageNamed:@"profile_cloudy_image.png"]];
     }
-    else if (indexPath.row == 3 || indexPath.row == 4)
+    else if (indexPath.row == 2 || indexPath.row == 3)
     {
         [growthRecordViewCell.m_datetemperature setText:@"5 月 1 日   23˚"];
         [growthRecordViewCell.m_babyDescription setText:@"Julian 一岁照片回顾"];
@@ -77,8 +84,6 @@
     
     return tableCell;
 }
-
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
