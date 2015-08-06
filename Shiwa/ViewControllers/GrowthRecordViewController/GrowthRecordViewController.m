@@ -26,6 +26,14 @@
     [self.m_babyAge setText:@"48 个月"];
     [self.m_babyFans setText:@"粉丝   58k"];
     [self.m_babyFriends setText:@"亲友团  183"];
+    
+    [self.m_growthRecordTable setContentInset:UIEdgeInsetsMake(0, 0, 220, 0)];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tabBarController.tabBar setHidden:NO];
+    [super viewWillAppear:animated];
 }
 
 //to change the status bar color to white
@@ -37,6 +45,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)onBtnLock:(id)sender {
+    //    m_nCategoryNum = (int)((UIButton*)sender).tag;
+    //    [self performSegueWithIdentifier:@"category2Feed" sender:nil];
+}
+
+- (void)onBtnPost:(id)sender {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"编辑", @"删除", nil];
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+}
+
+- (BOOL)onBtnDelete {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"确定要删除?", @"确定", nil];
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -79,6 +103,11 @@
         [growthRecordViewCell.m_postPlace setText:@"北京市"];
         [growthRecordViewCell.m_weatherImage setImage:[UIImage imageNamed:@"profile_suncloudy_image.png"]];
     }
+    [growthRecordViewCell.m_lockButton addTarget:self action:@selector(onBtnLock:) forControlEvents:UIControlEventTouchUpInside];
+    growthRecordViewCell.m_lockButton.tag = indexPath.row;
+    
+    [growthRecordViewCell.m_postButton addTarget:self action:@selector(onBtnPost:) forControlEvents:UIControlEventTouchUpInside];
+    growthRecordViewCell.m_postButton.tag = indexPath.row;
     
     tableCell = growthRecordViewCell;
     
@@ -92,6 +121,18 @@
     int nHeight = 284;
     
     return nHeight;
+}
+
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        [self onBtnDelete];
+    }
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 @end

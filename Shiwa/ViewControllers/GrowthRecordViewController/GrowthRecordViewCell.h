@@ -16,5 +16,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *m_babyDescription;
 @property (strong, nonatomic) IBOutlet UILabel *m_postTime;
 @property (strong, nonatomic) IBOutlet UILabel *m_postPlace;
+@property (strong, nonatomic) IBOutlet UIButton *m_postButton;
 
 @end
