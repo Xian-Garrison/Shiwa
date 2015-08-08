@@ -7,6 +7,8 @@
 //
 
 #import "PostOptionViewController.h"
+#import <AVFoundation/AVFoundation.h>
+#import "UzysAssetsPickerController.h"
 
 @interface PostOptionViewController ()
 
@@ -57,13 +59,88 @@
 }
 
 - (IBAction)onCamerarollBtn:(id)sender {
+#if 0
+    UzysAppearanceConfig *appearanceConfig = [[UzysAppearanceConfig alloc] init];
+    appearanceConfig.finishSelectionButtonColor = [UIColor blueColor];
+    appearanceConfig.assetsGroupSelectedImageName = @"checker.png";
+    appearanceConfig.cellSpacing = 1.0f;
+    appearanceConfig.assetsCountInALine = 5;
+    [UzysAssetsPickerController setUpAppearanceConfig:appearanceConfig];
+#endif
+    
+    UzysAssetsPickerController *picker = [[UzysAssetsPickerController alloc] init];
+    picker.delegate = self;
+    picker.maximumNumberOfSelectionVideo = 0;
+    picker.maximumNumberOfSelectionPhoto = 9;
+    [self presentViewController:picker animated:YES completion:^{
+        
+    }];
 }
 
 - (IBAction)onTakevideoBtn:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
+        return;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
+        && [[UIImagePickerController availableMediaTypesForSourceType:
+             UIImagePickerControllerSourceTypeCamera] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeMovie, nil];
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        } else if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        }
+        
+    } else {
+        return;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.showsCameraControls = YES;
+    cameraUI.delegate = self;
+    [cameraUI setVideoMaximumDuration:20];
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
+
 }
 
 - (IBAction)onTakephotoBtn:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
+        return;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
+        && [[UIImagePickerController availableMediaTypesForSourceType:
+             UIImagePickerControllerSourceTypeCamera] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeImage, nil];
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        } else if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        }
+        
+    } else {
+        return;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.showsCameraControls = YES;
+    cameraUI.delegate = self;
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
 }
 - (IBAction)onIssueBtn:(id)sender {
 }
+
 @end

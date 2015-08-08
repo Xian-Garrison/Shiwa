@@ -13,7 +13,6 @@
 		90001C391B66B8BF00E4F6D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90001C371B66B8BF00E4F6D7 /* Main.storyboard */; };
 		90001C3B1B66B8BF00E4F6D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90001C3A1B66B8BF00E4F6D7 /* Images.xcassets */; };
 		90001C3E1B66B8BF00E4F6D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90001C3C1B66B8BF00E4F6D7 /* LaunchScreen.xib */; };
-		90001C4A1B66B8BF00E4F6D7 /* ShiwaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90001C491B66B8BF00E4F6D7 /* ShiwaTests.m */; };
 		90001C641B66BADD00E4F6D7 /* baby_complete_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C541B66BADD00E4F6D7 /* baby_complete_btn.png */; };
 		90001C651B66BADD00E4F6D7 /* baby_nav_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C551B66BADD00E4F6D7 /* baby_nav_bar.png */; };
 		90001C661B66BADD00E4F6D7 /* baby_notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 90001C561B66BADD00E4F6D7 /* baby_notification.png */; };
@@ -116,17 +115,30 @@
 		9034AA8B1B7409820047CA79 /* PostSearchLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AA8A1B7409820047CA79 /* PostSearchLocationViewController.m */; };
 		9034AA8E1B740A2F0047CA79 /* SearchLocationViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AA8D1B740A2F0047CA79 /* SearchLocationViewCell.m */; };
 		9034AA921B741CF20047CA79 /* create_white_location_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 9034AA911B741CF20047CA79 /* create_white_location_image.png */; };
+		9034AAA51B7509E20047CA79 /* UIImage+UzysExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AA951B7509E20047CA79 /* UIImage+UzysExtension.m */; };
+		9034AAA61B7509E20047CA79 /* UzysAppearanceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AA971B7509E20047CA79 /* UzysAppearanceConfig.m */; };
+		9034AAA71B7509E20047CA79 /* UzysAssetPickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9034AA981B7509E20047CA79 /* UzysAssetPickerController.bundle */; };
+		9034AAA81B7509E20047CA79 /* UzysAssetsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AA9A1B7509E20047CA79 /* UzysAssetsPickerController.m */; };
+		9034AAA91B7509E20047CA79 /* UzysAssetsPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9034AA9B1B7509E20047CA79 /* UzysAssetsPickerController.xib */; };
+		9034AAAA1B7509E20047CA79 /* UzysAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AA9E1B7509E20047CA79 /* UzysAssetsViewCell.m */; };
+		9034AAAB1B7509E20047CA79 /* UzysGroupPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AAA01B7509E20047CA79 /* UzysGroupPickerView.m */; };
+		9034AAAC1B7509E20047CA79 /* UzysGroupViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AAA21B7509E20047CA79 /* UzysGroupViewCell.m */; };
+		9034AAAD1B7509E20047CA79 /* UzysWrapperPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AAA41B7509E20047CA79 /* UzysWrapperPickerController.m */; };
+		9034AAB41B750A480047CA79 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9034AAB21B750A100047CA79 /* AssetsLibrary.framework */; };
+		9034AAB51B750A480047CA79 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9034AAB01B750A080047CA79 /* MobileCoreServices.framework */; };
+		9034AAB61B750A480047CA79 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9034AAAE1B750A000047CA79 /* AVFoundation.framework */; };
+		9034ACC01B7559CA0047CA79 /* PhostPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034ACBF1B7559CA0047CA79 /* PhostPhotoViewController.m */; };
+		9034AE6C1B7572F90047CA79 /* PostPhotoDaytimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE6B1B7572F90047CA79 /* PostPhotoDaytimeViewController.m */; };
+		9034AE701B7573280047CA79 /* PostPhotoDaytimeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE6F1B7573280047CA79 /* PostPhotoDaytimeSelectViewController.m */; };
+		9034AE951B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE911B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m */; };
+		9034AE961B75778D0047CA79 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE921B75778D0047CA79 /* README.md */; };
+		9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */; };
+		90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F906D71B75799F003E6BC7 /* Images.xcassets */; };
+		90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906D91B75799F003E6BC7 /* THDateDay.m */; };
+		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
+		90F906E11B75799F003E6BC7 /* THDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906DC1B75799F003E6BC7 /* THDatePickerViewController.m */; };
+		90F906E21B75799F003E6BC7 /* THDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DD1B75799F003E6BC7 /* THDatePickerViewController.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		90001C441B66B8BF00E4F6D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 90001C221B66B8BE00E4F6D7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 90001C291B66B8BE00E4F6D7;
-			remoteInfo = Shiwa;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		90001C2A1B66B8BE00E4F6D7 /* Shiwa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shiwa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,7 +151,6 @@
 		90001C381B66B8BF00E4F6D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90001C3A1B66B8BF00E4F6D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90001C3D1B66B8BF00E4F6D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		90001C431B66B8BF00E4F6D7 /* ShiwaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiwaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90001C481B66B8BF00E4F6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90001C491B66B8BF00E4F6D7 /* ShiwaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShiwaTests.m; sourceTree = "<group>"; };
 		90001C541B66BADD00E4F6D7 /* baby_complete_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby_complete_btn.png; sourceTree = "<group>"; };
@@ -258,6 +269,45 @@
 		9034AA8C1B740A2F0047CA79 /* SearchLocationViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchLocationViewCell.h; path = ViewControllers/PostSearchLocationViewController/SearchLocationViewCell.h; sourceTree = "<group>"; };
 		9034AA8D1B740A2F0047CA79 /* SearchLocationViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchLocationViewCell.m; path = ViewControllers/PostSearchLocationViewController/SearchLocationViewCell.m; sourceTree = "<group>"; };
 		9034AA911B741CF20047CA79 /* create_white_location_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_white_location_image.png; sourceTree = "<group>"; };
+		9034AA941B7509E20047CA79 /* UIImage+UzysExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+UzysExtension.h"; sourceTree = "<group>"; };
+		9034AA951B7509E20047CA79 /* UIImage+UzysExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+UzysExtension.m"; sourceTree = "<group>"; };
+		9034AA961B7509E20047CA79 /* UzysAppearanceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysAppearanceConfig.h; sourceTree = "<group>"; };
+		9034AA971B7509E20047CA79 /* UzysAppearanceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysAppearanceConfig.m; sourceTree = "<group>"; };
+		9034AA981B7509E20047CA79 /* UzysAssetPickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UzysAssetPickerController.bundle; sourceTree = "<group>"; };
+		9034AA991B7509E20047CA79 /* UzysAssetsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysAssetsPickerController.h; sourceTree = "<group>"; };
+		9034AA9A1B7509E20047CA79 /* UzysAssetsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysAssetsPickerController.m; sourceTree = "<group>"; };
+		9034AA9B1B7509E20047CA79 /* UzysAssetsPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UzysAssetsPickerController.xib; sourceTree = "<group>"; };
+		9034AA9C1B7509E20047CA79 /* UzysAssetsPickerController_Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysAssetsPickerController_Configuration.h; sourceTree = "<group>"; };
+		9034AA9D1B7509E20047CA79 /* UzysAssetsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysAssetsViewCell.h; sourceTree = "<group>"; };
+		9034AA9E1B7509E20047CA79 /* UzysAssetsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysAssetsViewCell.m; sourceTree = "<group>"; };
+		9034AA9F1B7509E20047CA79 /* UzysGroupPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysGroupPickerView.h; sourceTree = "<group>"; };
+		9034AAA01B7509E20047CA79 /* UzysGroupPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysGroupPickerView.m; sourceTree = "<group>"; };
+		9034AAA11B7509E20047CA79 /* UzysGroupViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysGroupViewCell.h; sourceTree = "<group>"; };
+		9034AAA21B7509E20047CA79 /* UzysGroupViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysGroupViewCell.m; sourceTree = "<group>"; };
+		9034AAA31B7509E20047CA79 /* UzysWrapperPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UzysWrapperPickerController.h; sourceTree = "<group>"; };
+		9034AAA41B7509E20047CA79 /* UzysWrapperPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UzysWrapperPickerController.m; sourceTree = "<group>"; };
+		9034AAAE1B750A000047CA79 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9034AAB01B750A080047CA79 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9034AAB21B750A100047CA79 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		9034ACBE1B7559CA0047CA79 /* PhostPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhostPhotoViewController.h; path = ViewControllers/PostPhotoViewController/PhostPhotoViewController.h; sourceTree = "<group>"; };
+		9034ACBF1B7559CA0047CA79 /* PhostPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhostPhotoViewController.m; path = ViewControllers/PostPhotoViewController/PhostPhotoViewController.m; sourceTree = "<group>"; };
+		9034AE6A1B7572F90047CA79 /* PostPhotoDaytimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostPhotoDaytimeViewController.h; path = ViewControllers/PostPhotoDaytimeViewController/PostPhotoDaytimeViewController.h; sourceTree = "<group>"; };
+		9034AE6B1B7572F90047CA79 /* PostPhotoDaytimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostPhotoDaytimeViewController.m; path = ViewControllers/PostPhotoDaytimeViewController/PostPhotoDaytimeViewController.m; sourceTree = "<group>"; };
+		9034AE6E1B7573280047CA79 /* PostPhotoDaytimeSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostPhotoDaytimeSelectViewController.h; path = ViewControllers/PostPhotoDaytimeSelectViewController/PostPhotoDaytimeSelectViewController.h; sourceTree = "<group>"; };
+		9034AE6F1B7573280047CA79 /* PostPhotoDaytimeSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostPhotoDaytimeSelectViewController.m; path = ViewControllers/PostPhotoDaytimeSelectViewController/PostPhotoDaytimeSelectViewController.m; sourceTree = "<group>"; };
+		9034AE8E1B7576200047CA79 /* Shiwa-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Shiwa-Prefix.pch"; sourceTree = "<group>"; };
+		9034AE901B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YMOptionsAndDefaults.h"; sourceTree = "<group>"; };
+		9034AE911B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YMOptionsAndDefaults.m"; sourceTree = "<group>"; };
+		9034AE921B75778D0047CA79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9034AE931B75778D0047CA79 /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
+		9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
+		90F906D71B75799F003E6BC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		90F906D81B75799F003E6BC7 /* THDateDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDateDay.h; sourceTree = "<group>"; };
+		90F906D91B75799F003E6BC7 /* THDateDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDateDay.m; sourceTree = "<group>"; };
+		90F906DA1B75799F003E6BC7 /* THDateDay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THDateDay.xib; sourceTree = "<group>"; };
+		90F906DB1B75799F003E6BC7 /* THDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDatePickerViewController.h; sourceTree = "<group>"; };
+		90F906DC1B75799F003E6BC7 /* THDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDatePickerViewController.m; sourceTree = "<group>"; };
+		90F906DD1B75799F003E6BC7 /* THDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THDatePickerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,17 +315,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9034AAB41B750A480047CA79 /* AssetsLibrary.framework in Frameworks */,
+				9034AAB51B750A480047CA79 /* MobileCoreServices.framework in Frameworks */,
+				9034AAB61B750A480047CA79 /* AVFoundation.framework in Frameworks */,
 				901807D31B6FCDA200AFF0A2 /* Foundation.framework in Frameworks */,
 				901807DA1B6FCDD900AFF0A2 /* UIKit.framework in Frameworks */,
 				901807DB1B6FCDD900AFF0A2 /* QuartzCore.framework in Frameworks */,
 				901807DC1B6FCDD900AFF0A2 /* CoreGraphics.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90001C401B66B8BF00E4F6D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +341,6 @@
 			isa = PBXGroup;
 			children = (
 				90001C2A1B66B8BE00E4F6D7 /* Shiwa.app */,
-				90001C431B66B8BF00E4F6D7 /* ShiwaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,6 +361,7 @@
 		90001C2D1B66B8BE00E4F6D7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9034AE8E1B7576200047CA79 /* Shiwa-Prefix.pch */,
 				90001C3A1B66B8BF00E4F6D7 /* Images.xcassets */,
 				90001C311B66B8BE00E4F6D7 /* AppDelegate.h */,
 				90001C321B66B8BE00E4F6D7 /* AppDelegate.m */,
@@ -358,6 +404,9 @@
 		90001C741B67696500E4F6D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9034AE6D1B7573040047CA79 /* PostPhotoDaytimeSelectViewController */,
+				9034AE691B7572D60047CA79 /* PostPhotoDaytimeViewController */,
+				9034ACBD1B7559830047CA79 /* PostPhotoViewController */,
 				9034AA881B74095F0047CA79 /* PostSearchLocationViewController */,
 				9034AA801B73DA850047CA79 /* PostTextViewController */,
 				9034AA7C1B73C78F0047CA79 /* MainTabbarController */,
@@ -440,6 +489,9 @@
 		901807CB1B6F7D0300AFF0A2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				90F906D61B75799F003E6BC7 /* THCalendarDatePicker */,
+				9034AE8F1B75778D0047CA79 /* KNSemiModalViewController */,
+				9034AA931B7509E20047CA79 /* CameraRoll */,
 				901807CC1B6F7D1300AFF0A2 /* Combobox */,
 			);
 			name = Libraries;
@@ -458,6 +510,9 @@
 		901807D01B6F7E6200AFF0A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9034AAB21B750A100047CA79 /* AssetsLibrary.framework */,
+				9034AAB01B750A080047CA79 /* MobileCoreServices.framework */,
+				9034AAAE1B750A000047CA79 /* AVFoundation.framework */,
 				901807D81B6FCDC200AFF0A2 /* UIKit.framework */,
 				901807D61B6FCDBB00AFF0A2 /* QuartzCore.framework */,
 				901807D41B6FCDB100AFF0A2 /* CoreGraphics.framework */,
@@ -634,6 +689,86 @@
 			name = PostSearchLocationViewController;
 			sourceTree = "<group>";
 		};
+		9034AA931B7509E20047CA79 /* CameraRoll */ = {
+			isa = PBXGroup;
+			children = (
+				9034AA941B7509E20047CA79 /* UIImage+UzysExtension.h */,
+				9034AA951B7509E20047CA79 /* UIImage+UzysExtension.m */,
+				9034AA961B7509E20047CA79 /* UzysAppearanceConfig.h */,
+				9034AA971B7509E20047CA79 /* UzysAppearanceConfig.m */,
+				9034AA981B7509E20047CA79 /* UzysAssetPickerController.bundle */,
+				9034AA991B7509E20047CA79 /* UzysAssetsPickerController.h */,
+				9034AA9A1B7509E20047CA79 /* UzysAssetsPickerController.m */,
+				9034AA9B1B7509E20047CA79 /* UzysAssetsPickerController.xib */,
+				9034AA9C1B7509E20047CA79 /* UzysAssetsPickerController_Configuration.h */,
+				9034AA9D1B7509E20047CA79 /* UzysAssetsViewCell.h */,
+				9034AA9E1B7509E20047CA79 /* UzysAssetsViewCell.m */,
+				9034AA9F1B7509E20047CA79 /* UzysGroupPickerView.h */,
+				9034AAA01B7509E20047CA79 /* UzysGroupPickerView.m */,
+				9034AAA11B7509E20047CA79 /* UzysGroupViewCell.h */,
+				9034AAA21B7509E20047CA79 /* UzysGroupViewCell.m */,
+				9034AAA31B7509E20047CA79 /* UzysWrapperPickerController.h */,
+				9034AAA41B7509E20047CA79 /* UzysWrapperPickerController.m */,
+			);
+			name = CameraRoll;
+			path = Libraries/CameraRoll;
+			sourceTree = "<group>";
+		};
+		9034ACBD1B7559830047CA79 /* PostPhotoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9034ACBE1B7559CA0047CA79 /* PhostPhotoViewController.h */,
+				9034ACBF1B7559CA0047CA79 /* PhostPhotoViewController.m */,
+			);
+			name = PostPhotoViewController;
+			sourceTree = "<group>";
+		};
+		9034AE691B7572D60047CA79 /* PostPhotoDaytimeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9034AE6A1B7572F90047CA79 /* PostPhotoDaytimeViewController.h */,
+				9034AE6B1B7572F90047CA79 /* PostPhotoDaytimeViewController.m */,
+			);
+			name = PostPhotoDaytimeViewController;
+			sourceTree = "<group>";
+		};
+		9034AE6D1B7573040047CA79 /* PostPhotoDaytimeSelectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9034AE6E1B7573280047CA79 /* PostPhotoDaytimeSelectViewController.h */,
+				9034AE6F1B7573280047CA79 /* PostPhotoDaytimeSelectViewController.m */,
+			);
+			name = PostPhotoDaytimeSelectViewController;
+			sourceTree = "<group>";
+		};
+		9034AE8F1B75778D0047CA79 /* KNSemiModalViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9034AE901B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.h */,
+				9034AE911B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m */,
+				9034AE921B75778D0047CA79 /* README.md */,
+				9034AE931B75778D0047CA79 /* UIViewController+KNSemiModal.h */,
+				9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */,
+			);
+			name = KNSemiModalViewController;
+			path = Libraries/KNSemiModalViewController;
+			sourceTree = "<group>";
+		};
+		90F906D61B75799F003E6BC7 /* THCalendarDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				90F906D71B75799F003E6BC7 /* Images.xcassets */,
+				90F906D81B75799F003E6BC7 /* THDateDay.h */,
+				90F906D91B75799F003E6BC7 /* THDateDay.m */,
+				90F906DA1B75799F003E6BC7 /* THDateDay.xib */,
+				90F906DB1B75799F003E6BC7 /* THDatePickerViewController.h */,
+				90F906DC1B75799F003E6BC7 /* THDatePickerViewController.m */,
+				90F906DD1B75799F003E6BC7 /* THDatePickerViewController.xib */,
+			);
+			name = THCalendarDatePicker;
+			path = Libraries/THCalendarDatePicker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -654,24 +789,6 @@
 			productReference = 90001C2A1B66B8BE00E4F6D7 /* Shiwa.app */;
 			productType = "com.apple.product-type.application";
 		};
-		90001C421B66B8BF00E4F6D7 /* ShiwaTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 90001C501B66B8BF00E4F6D7 /* Build configuration list for PBXNativeTarget "ShiwaTests" */;
-			buildPhases = (
-				90001C3F1B66B8BF00E4F6D7 /* Sources */,
-				90001C401B66B8BF00E4F6D7 /* Frameworks */,
-				90001C411B66B8BF00E4F6D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				90001C451B66B8BF00E4F6D7 /* PBXTargetDependency */,
-			);
-			name = ShiwaTests;
-			productName = ShiwaTests;
-			productReference = 90001C431B66B8BF00E4F6D7 /* ShiwaTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -684,10 +801,6 @@
 					90001C291B66B8BE00E4F6D7 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = F2SSNS8FW6;
-					};
-					90001C421B66B8BF00E4F6D7 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = 90001C291B66B8BE00E4F6D7;
 					};
 				};
 			};
@@ -705,7 +818,6 @@
 			projectRoot = "";
 			targets = (
 				90001C291B66B8BE00E4F6D7 /* Shiwa */,
-				90001C421B66B8BF00E4F6D7 /* ShiwaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -745,6 +857,7 @@
 				9034AA681B73134C0047CA79 /* create_fill_button.png in Resources */,
 				9034AA6C1B73134C0047CA79 /* create_photo_button.png in Resources */,
 				9034AA921B741CF20047CA79 /* create_white_location_image.png in Resources */,
+				90F906E21B75799F003E6BC7 /* THDatePickerViewController.xib in Resources */,
 				9034AA701B73134C0047CA79 /* create_selecttime_gray_image.png in Resources */,
 				90001C6E1B66BADD00E4F6D7 /* Main_signin_btn.png in Resources */,
 				9034AA6D1B73134C0047CA79 /* create_playvideo_button.png in Resources */,
@@ -768,6 +881,7 @@
 				90001C641B66BADD00E4F6D7 /* baby_complete_btn.png in Resources */,
 				90001C661B66BADD00E4F6D7 /* baby_notification.png in Resources */,
 				90001C721B66BADD00E4F6D7 /* verify_btn.png in Resources */,
+				90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */,
 				9034AA271B71A73F0047CA79 /* profile_lock_image.png in Resources */,
 				9034AA231B71A73F0047CA79 /* profile_image_back.png in Resources */,
 				9034AA351B71A73F0047CA79 /* profile_weibo_btn.png in Resources */,
@@ -796,19 +910,15 @@
 				9034AA331B71A73F0047CA79 /* profile_user_image.png in Resources */,
 				9034AA2A1B71A73F0047CA79 /* profile_menu_people.png in Resources */,
 				901807DE1B6FCFFD00AFF0A2 /* comboDropIndicator.png in Resources */,
+				90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */,
 				9034AA201B71A73F0047CA79 /* profile_email_btn.png in Resources */,
+				9034AAA71B7509E20047CA79 /* UzysAssetPickerController.bundle in Resources */,
 				90001C671B66BADD00E4F6D7 /* forgot_btn.png in Resources */,
 				90001C681B66BADD00E4F6D7 /* forgot_nav_bar.png in Resources */,
 				90001C6A1B66BADD00E4F6D7 /* login_login_btn.png in Resources */,
 				9034AA2B1B71A73F0047CA79 /* profile_person_image.png in Resources */,
 				90001C3B1B66B8BF00E4F6D7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90001C411B66B8BF00E4F6D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				9034AAA91B7509E20047CA79 /* UzysAssetsPickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -822,40 +932,39 @@
 				9034AA831B73DAAB0047CA79 /* PostTextViewController.m in Sources */,
 				9034AA8E1B740A2F0047CA79 /* SearchLocationViewCell.m in Sources */,
 				90001C7F1B67766A00E4F6D7 /* LoginViewController.m in Sources */,
+				9034ACC01B7559CA0047CA79 /* PhostPhotoViewController.m in Sources */,
+				9034AE961B75778D0047CA79 /* README.md in Sources */,
 				90001C951B69019200E4F6D7 /* SignupVerifyViewController.m in Sources */,
+				9034AAAA1B7509E20047CA79 /* UzysAssetsViewCell.m in Sources */,
+				9034AAA61B7509E20047CA79 /* UzysAppearanceConfig.m in Sources */,
+				9034AAAD1B7509E20047CA79 /* UzysWrapperPickerController.m in Sources */,
+				9034AE951B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m in Sources */,
 				90001C361B66B8BE00E4F6D7 /* ViewController.m in Sources */,
 				90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */,
 				9034AA8B1B7409820047CA79 /* PostSearchLocationViewController.m in Sources */,
 				90001C831B67802C00E4F6D7 /* ForgotViewController.m in Sources */,
+				90F906E11B75799F003E6BC7 /* THDatePickerViewController.m in Sources */,
+				9034AAAC1B7509E20047CA79 /* UzysGroupViewCell.m in Sources */,
 				9018075E1B6964EB00AFF0A2 /* BabySignupViewController.m in Sources */,
 				9034AA481B721ED60047CA79 /* GrowthRecordViewCell.m in Sources */,
+				9034AAA51B7509E20047CA79 /* UIImage+UzysExtension.m in Sources */,
+				9034AAAB1B7509E20047CA79 /* UzysGroupPickerView.m in Sources */,
 				90001C331B66B8BE00E4F6D7 /* AppDelegate.m in Sources */,
+				9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */,
 				9034AA7B1B73BECA0047CA79 /* PostOptionViewController.m in Sources */,
 				90001C8D1B68F2C700E4F6D7 /* SignupViewController.m in Sources */,
 				90001C301B66B8BE00E4F6D7 /* main.m in Sources */,
 				901807CF1B6F7D1300AFF0A2 /* ComboBoxView.m in Sources */,
 				9034AA7F1B73C7B00047CA79 /* MainTabbarController.m in Sources */,
 				9034AA451B721E8B0047CA79 /* GrowthRecordViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		90001C3F1B66B8BF00E4F6D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90001C4A1B66B8BF00E4F6D7 /* ShiwaTests.m in Sources */,
+				9034AE6C1B7572F90047CA79 /* PostPhotoDaytimeViewController.m in Sources */,
+				9034AAA81B7509E20047CA79 /* UzysAssetsPickerController.m in Sources */,
+				90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */,
+				9034AE701B7573280047CA79 /* PostPhotoDaytimeSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		90001C451B66B8BF00E4F6D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 90001C291B66B8BE00E4F6D7 /* Shiwa */;
-			targetProxy = 90001C441B66B8BF00E4F6D7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		90001C371B66B8BF00E4F6D7 /* Main.storyboard */ = {
@@ -913,7 +1022,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -950,7 +1059,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -964,8 +1073,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shiwa/Shiwa-Prefix.pch";
 				INFOPLIST_FILE = Shiwa/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -979,45 +1092,15 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Shiwa/Shiwa-Prefix.pch";
 				INFOPLIST_FILE = Shiwa/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-			};
-			name = Release;
-		};
-		90001C511B66B8BF00E4F6D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ShiwaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shiwa.app/Shiwa";
-			};
-			name = Debug;
-		};
-		90001C521B66B8BF00E4F6D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ShiwaTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shiwa.app/Shiwa";
 			};
 			name = Release;
 		};
@@ -1038,15 +1121,6 @@
 			buildConfigurations = (
 				90001C4E1B66B8BF00E4F6D7 /* Debug */,
 				90001C4F1B66B8BF00E4F6D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		90001C501B66B8BF00E4F6D7 /* Build configuration list for PBXNativeTarget "ShiwaTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90001C511B66B8BF00E4F6D7 /* Debug */,
-				90001C521B66B8BF00E4F6D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
