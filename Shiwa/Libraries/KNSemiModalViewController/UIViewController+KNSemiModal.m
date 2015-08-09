@@ -195,7 +195,7 @@ const struct KNSemiModalOptionKeys KNSemiModalOptionKeys = {
         // Calulate all frames
         CGFloat semiViewHeight = view.frame.size.height;
         CGRect vf = target.bounds;
-        CGRect semiViewFrame = CGRectMake(0, vf.size.height-semiViewHeight, vf.size.width, semiViewHeight);
+        CGRect semiViewFrame = CGRectMake(0, (vf.size.height-semiViewHeight)/2, vf.size.width, semiViewHeight);
         CGRect overlayFrame = CGRectMake(0, 0, vf.size.width, vf.size.height-semiViewHeight);
         
         // Add semi overlay

@@ -9,6 +9,7 @@
 #import "PostSearchLocationViewController.h"
 #import "SearchLocationViewCell.h"
 #import "PostTextViewController.h"
+#import "PhostPhotoViewController.h"
 
 @interface PostSearchLocationViewController ()
 
@@ -19,6 +20,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setNeedsStatusBarAppearanceUpdate];
+    
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +67,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"location2Text" sender:nil];
+    if ([self.segueName isEqualToString:@"text2Location"])
+    {
+        [self performSegueWithIdentifier:@"location2Text" sender:nil];
+    }
+    else if ([self.segueName isEqualToString:@"photo2Location"])
+    {
+        [self performSegueWithIdentifier:@"location2Photo" sender:nil];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,6 +92,10 @@
     if ([[segue identifier] isEqualToString:@"location2Text"]) {
         PostTextViewController* postTextViewController = [segue destinationViewController];
         postTextViewController.bLocationSelected = TRUE;
+    }
+    else if ([[segue identifier] isEqualToString:@"location2Photo"]) {
+        PhostPhotoViewController* postPhotoViewController = [segue destinationViewController];
+        postPhotoViewController.bLocationSelected = TRUE;
     }
 }
 @end

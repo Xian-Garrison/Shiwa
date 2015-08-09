@@ -138,6 +138,7 @@
 		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
 		90F906E11B75799F003E6BC7 /* THDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906DC1B75799F003E6BC7 /* THDatePickerViewController.m */; };
 		90F906E21B75799F003E6BC7 /* THDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DD1B75799F003E6BC7 /* THDatePickerViewController.xib */; };
+		90F906E41B76D0F2003E6BC7 /* blue_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 90F906E31B76D0F2003E6BC7 /* blue_button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -308,6 +309,7 @@
 		90F906DB1B75799F003E6BC7 /* THDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDatePickerViewController.h; sourceTree = "<group>"; };
 		90F906DC1B75799F003E6BC7 /* THDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDatePickerViewController.m; sourceTree = "<group>"; };
 		90F906DD1B75799F003E6BC7 /* THDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THDatePickerViewController.xib; sourceTree = "<group>"; };
+		90F906E31B76D0F2003E6BC7 /* blue_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -600,6 +602,7 @@
 		9034AA4C1B73104C0047CA79 /* others */ = {
 			isa = PBXGroup;
 			children = (
+				90F906E31B76D0F2003E6BC7 /* blue_button.png */,
 				90001C841B6780A100E4F6D7 /* back_btn.png */,
 				90001C541B66BADD00E4F6D7 /* baby_complete_btn.png */,
 				90001C551B66BADD00E4F6D7 /* baby_nav_bar.png */,
@@ -911,6 +914,7 @@
 				9034AA2A1B71A73F0047CA79 /* profile_menu_people.png in Resources */,
 				901807DE1B6FCFFD00AFF0A2 /* comboDropIndicator.png in Resources */,
 				90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */,
+				90F906E41B76D0F2003E6BC7 /* blue_button.png in Resources */,
 				9034AA201B71A73F0047CA79 /* profile_email_btn.png in Resources */,
 				9034AAA71B7509E20047CA79 /* UzysAssetPickerController.bundle in Resources */,
 				90001C671B66BADD00E4F6D7 /* forgot_btn.png in Resources */,

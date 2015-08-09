@@ -7,6 +7,7 @@
 //
 
 #import "PostTextViewController.h"
+#import "PostSearchLocationViewController.h"
 
 @interface PostTextViewController ()
 
@@ -93,7 +94,7 @@
 }
 
 - (IBAction)onBackBtn:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self performSegueWithIdentifier:@"text2Option" sender:nil];
 }
 
 - (IBAction)onReleaseBtn:(id)sender {
@@ -156,4 +157,11 @@
     return YES;
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"text2Location"]) {
+        PostSearchLocationViewController* postSearchLocationViewController = [segue destinationViewController];
+        postSearchLocationViewController.segueName = @"text2Location";
+    }
+}
 @end

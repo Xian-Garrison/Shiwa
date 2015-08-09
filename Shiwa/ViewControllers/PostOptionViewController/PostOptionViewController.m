@@ -77,6 +77,18 @@
     }];
 }
 
+- (void)uzysAssetsPickerController:(UzysAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
+{
+    [self.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+    
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
+    [[UIApplication sharedApplication] setStatusBarHidden:self.wasStatusBarHidden withAnimation:UIStatusBarAnimationSlide];
+    [self setWantsFullScreenLayout:self.wasFullScreenLayout];
+#endif
+    
+    [self performSegueWithIdentifier:@"option2Photo" sender:nil];
+}
+
 - (IBAction)onTakevideoBtn:(id)sender {
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
         return;
@@ -141,6 +153,8 @@
     [self presentViewController:cameraUI animated:YES completion:nil];
 }
 - (IBAction)onIssueBtn:(id)sender {
+//    [self performSegueWithIdentifier:@"option2Photo" sender:nil];
+    
 }
 
 @end

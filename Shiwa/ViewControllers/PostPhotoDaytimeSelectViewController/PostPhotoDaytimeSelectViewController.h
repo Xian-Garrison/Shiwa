@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "THDatePickerViewController.h"
 
 @interface PostPhotoDaytimeSelectViewController : UIViewController
-
+- (IBAction)onDateBtn:(id)sender;
+- (IBAction)onBackBtn:(id)sender;
+@property (nonatomic, strong) THDatePickerViewController * datePicker;
+@property (strong, nonatomic) IBOutlet UILabel *m_dateString;
+@property (strong, nonatomic) IBOutlet UILabel *m_timeString;
 @end

@@ -10,5 +10,8 @@
 
 @interface PostPhotoDaytimeViewController : UIViewController
 - (IBAction)onSelectTimeBtn:(id)sender;
+- (IBAction)onBackBtn:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *m_selectedDateTime;
 
 @end

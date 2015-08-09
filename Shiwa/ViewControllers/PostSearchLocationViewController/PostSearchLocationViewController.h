@@ -10,6 +10,6 @@
 
 @interface PostSearchLocationViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *m_searchLocationTable;
-
+@property (assign) NSString *segueName;
 - (IBAction)onBackBtn:(id)sender;
 @end
