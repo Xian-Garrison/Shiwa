@@ -60,6 +60,7 @@
     self.m_PhoneNumber.borderStyle = UITextBorderStyleRoundedRect;
     self.m_Password.borderStyle = UITextBorderStyleRoundedRect;
     self.m_phoneCountryNum.layer.zPosition = 1;
+    self.m_countryNumLabel.layer.zPosition = 1;
     [super viewWillAppear:animated];
 }
 

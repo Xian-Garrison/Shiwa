@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *m_phoneCountryNum;
 @property (strong, nonatomic) IBOutlet UITextField *m_Password;
 @property (strong, nonatomic) IBOutlet UIButton *m_SignupButton;
+@property (strong, nonatomic) IBOutlet UILabel *m_countryNumLabel;
 - (IBAction)onSignupBtn:(id)sender;
 @end

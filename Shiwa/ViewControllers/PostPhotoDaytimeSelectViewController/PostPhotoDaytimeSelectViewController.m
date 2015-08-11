@@ -85,6 +85,19 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)onTimeBtn:(id)sender {
+    //Init the datePicker view and set self as delegate
+    SBFlatDatePicker *datePicker = [[SBFlatDatePicker alloc] initWithFrame:self.view.bounds];
+    [datePicker setDelegate:self];
+    
+    //OPTIONAL: Choose the background color
+    [datePicker setBackgroundColor:[UIColor whiteColor]];
+    
+    //Set the data picker as view of the new view controller
+    [self setView:datePicker];
+    
+}
+
 - (void)datePickerDonePressed:(THDatePickerViewController *)datePicker {
     self.curDate = datePicker.date;
     [self refreshTitle];

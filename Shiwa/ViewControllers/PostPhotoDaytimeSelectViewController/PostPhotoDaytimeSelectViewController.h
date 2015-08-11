@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "THDatePickerViewController.h"
+#import "SBFlatDatePicker.h"
+#import "SBFlatDatePickerDelegate.h"
 
-@interface PostPhotoDaytimeSelectViewController : UIViewController
+@interface PostPhotoDaytimeSelectViewController : UIViewController <SBFLatDatePickerDelegate>
 - (IBAction)onDateBtn:(id)sender;
 - (IBAction)onBackBtn:(id)sender;
+- (IBAction)onTimeBtn:(id)sender;
 @property (nonatomic, strong) THDatePickerViewController * datePicker;
 @property (strong, nonatomic) IBOutlet UILabel *m_dateString;
 @property (strong, nonatomic) IBOutlet UILabel *m_timeString;

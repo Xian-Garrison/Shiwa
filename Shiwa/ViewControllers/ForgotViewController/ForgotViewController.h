@@ -12,6 +12,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *m_phoneCountryNum;
 @property (strong, nonatomic) IBOutlet UITextField *m_PhoneNumber;
 @property (strong, nonatomic) IBOutlet UIButton *m_SendSMSButton;
+@property (strong, nonatomic) IBOutlet UILabel *m_countryNumLabel;
 - (IBAction)onSendSMSBtn:(id)sender;
 - (IBAction)onBackBtn:(id)sender;
 

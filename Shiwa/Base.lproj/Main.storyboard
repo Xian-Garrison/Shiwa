@@ -295,10 +295,6 @@
                                             <outlet property="delegate" destination="CAH-0S-lLu" id="nb8-UI-h56"/>
                                         </connections>
                                     </textField>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_phone_countrynum.png" id="Bwg-cm-bEt">
-                                        <rect key="frame" x="25" y="53" width="60" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  输入密码" minimumFontSize="17" id="tbd-dL-LqT" userLabel="PhoneNumber">
                                         <rect key="frame" x="25" y="102" width="268" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,6 +320,17 @@
                                         <rect key="frame" x="128" y="164" width="65" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_phone_countrynum.png" id="Bwg-cm-bEt">
+                                        <rect key="frame" x="25" y="53" width="60" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+86" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ivp-EA-8QU">
+                                        <rect key="frame" x="31" y="58" width="49" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -385,13 +392,6 @@
                                             <action selector="onSignupBtn:" destination="CAH-0S-lLu" eventType="touchUpInside" id="GYG-Mb-QVA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+86" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ivp-EA-8QU">
-                                        <rect key="frame" x="31" y="58" width="49" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
@@ -404,6 +404,7 @@
                         <outlet property="m_LoginButton" destination="YRi-Td-AhN" id="WOE-tM-4J3"/>
                         <outlet property="m_Password" destination="tbd-dL-LqT" id="5y6-UM-poV"/>
                         <outlet property="m_PhoneNumber" destination="ei4-qm-dj0" id="knx-0s-Ing"/>
+                        <outlet property="m_countryNumLabel" destination="ivp-EA-8QU" id="vG9-rV-p5D"/>
                         <outlet property="m_phoneCountryNum" destination="Bwg-cm-bEt" id="QeT-MZ-0pb"/>
                         <segue destination="CwR-Ux-Iwy" kind="push" identifier="login2Forgot" id="1GH-hd-aXZ"/>
                         <segue destination="f2w-9v-6fu" kind="push" identifier="login2Signup" id="yqO-vK-XkD"/>
@@ -507,6 +508,7 @@
                     <connections>
                         <outlet property="m_PhoneNumber" destination="Kbo-EG-yAE" id="Ufs-L5-6wQ"/>
                         <outlet property="m_SendSMSButton" destination="yyH-r7-zlc" id="VU3-xB-tb3"/>
+                        <outlet property="m_countryNumLabel" destination="3hf-Us-fo7" id="Mn3-uQ-yt0"/>
                         <outlet property="m_phoneCountryNum" destination="WJl-5T-ydF" id="KxE-Su-5wo"/>
                         <segue destination="9nI-ba-dLT" kind="push" identifier="forgot2Verify" id="ZRc-mR-4QN"/>
                     </connections>
@@ -771,6 +773,7 @@
                         <outlet property="m_Password" destination="XZI-Ds-D4j" id="AVK-3r-RTE"/>
                         <outlet property="m_PhoneNumber" destination="leT-bc-Gdx" id="dD8-B8-cfi"/>
                         <outlet property="m_SignupButton" destination="8Oe-gv-c0v" id="OB4-G6-eVv"/>
+                        <outlet property="m_countryNumLabel" destination="rqV-ke-LWU" id="eLK-lT-9fL"/>
                         <outlet property="m_phoneCountryNum" destination="ZFu-ew-ROK" id="JQu-It-FD4"/>
                         <segue destination="8S9-pO-LYX" kind="push" identifier="signup2Verify" id="lHD-1h-wBB"/>
                     </connections>
@@ -2178,6 +2181,9 @@
                                         <state key="normal" image="create_selecttime_empty_image.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTimeBtn:" destination="TPj-BY-Bo7" eventType="touchUpInside" id="QCH-mx-s35"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ptA-mB-1g2">
                                         <rect key="frame" x="255" y="76" width="47" height="20"/>
@@ -2266,7 +2272,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="lKN-5m-Id3"/>
+        <segue reference="kSD-P8-3iK"/>
         <segue reference="yqO-vK-XkD"/>
         <segue reference="VdI-vy-Zb7"/>
         <segue reference="G4W-hB-mbF"/>

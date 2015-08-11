@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *m_phoneCountryNum;
 @property (strong, nonatomic) IBOutlet UITextField *m_Password;
 @property (strong, nonatomic) IBOutlet UIButton *m_LoginButton;
+@property (strong, nonatomic) IBOutlet UILabel *m_countryNumLabel;
 - (IBAction)onLoginBtn:(id)sender;
 - (IBAction)onForgotBtn:(id)sender;
 - (IBAction)onSignupBtn:(id)sender;

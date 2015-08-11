@@ -28,6 +28,14 @@
     [self.m_babyFriends setText:@"亲友团  183"];
     
     [self.m_growthRecordTable setContentInset:UIEdgeInsetsMake(0, 0, 220, 0)];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnTableView:)];
+    [self.m_growthRecordTable addGestureRecognizer:tap];
+}
+
+- (void)didTapOnTableView:(UIGestureRecognizer *) recognizer {
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"编辑", @"删除", nil];
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -53,8 +61,6 @@
 }
 
 - (void)onBtnPost:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"编辑", @"删除", nil];
-    [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
 - (BOOL)onBtnDelete {

@@ -133,6 +133,7 @@
 		9034AE951B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE911B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m */; };
 		9034AE961B75778D0047CA79 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE921B75778D0047CA79 /* README.md */; };
 		9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */; };
+		904809471B7967B000246B06 /* SBFlatDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 904809451B7967B000246B06 /* SBFlatDatePicker.m */; };
 		90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F906D71B75799F003E6BC7 /* Images.xcassets */; };
 		90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906D91B75799F003E6BC7 /* THDateDay.m */; };
 		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
@@ -302,6 +303,9 @@
 		9034AE921B75778D0047CA79 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9034AE931B75778D0047CA79 /* UIViewController+KNSemiModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNSemiModal.h"; sourceTree = "<group>"; };
 		9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNSemiModal.m"; sourceTree = "<group>"; };
+		904809441B7967B000246B06 /* SBFlatDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFlatDatePicker.h; sourceTree = "<group>"; };
+		904809451B7967B000246B06 /* SBFlatDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFlatDatePicker.m; sourceTree = "<group>"; };
+		904809461B7967B000246B06 /* SBFlatDatePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFlatDatePickerDelegate.h; sourceTree = "<group>"; };
 		90F906D71B75799F003E6BC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90F906D81B75799F003E6BC7 /* THDateDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDateDay.h; sourceTree = "<group>"; };
 		90F906D91B75799F003E6BC7 /* THDateDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDateDay.m; sourceTree = "<group>"; };
@@ -491,6 +495,7 @@
 		901807CB1B6F7D0300AFF0A2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				904809431B7967B000246B06 /* SBFlatDatePicker */,
 				90F906D61B75799F003E6BC7 /* THCalendarDatePicker */,
 				9034AE8F1B75778D0047CA79 /* KNSemiModalViewController */,
 				9034AA931B7509E20047CA79 /* CameraRoll */,
@@ -757,6 +762,17 @@
 			path = Libraries/KNSemiModalViewController;
 			sourceTree = "<group>";
 		};
+		904809431B7967B000246B06 /* SBFlatDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				904809441B7967B000246B06 /* SBFlatDatePicker.h */,
+				904809451B7967B000246B06 /* SBFlatDatePicker.m */,
+				904809461B7967B000246B06 /* SBFlatDatePickerDelegate.h */,
+			);
+			name = SBFlatDatePicker;
+			path = Libraries/SBFlatDatePicker;
+			sourceTree = "<group>";
+		};
 		90F906D61B75799F003E6BC7 /* THCalendarDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -957,6 +973,7 @@
 				9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */,
 				9034AA7B1B73BECA0047CA79 /* PostOptionViewController.m in Sources */,
 				90001C8D1B68F2C700E4F6D7 /* SignupViewController.m in Sources */,
+				904809471B7967B000246B06 /* SBFlatDatePicker.m in Sources */,
 				90001C301B66B8BE00E4F6D7 /* main.m in Sources */,
 				901807CF1B6F7D1300AFF0A2 /* ComboBoxView.m in Sources */,
 				9034AA7F1B73C7B00047CA79 /* MainTabbarController.m in Sources */,
