@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ComboBoxView.h"
 
-@interface BabySignupViewController : UIViewController
-- (IBAction)onBackBtn:(id)sender;
+@interface BabySignupViewController : UIViewController <UIImagePickerControllerDelegate, ComboBoxViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UIButton *m_photoButton;
 @property (strong, nonatomic) IBOutlet UITextField *m_NickName;
 @property (strong, nonatomic) IBOutlet UITextField *m_UserEmail;
 @property (strong, nonatomic) IBOutlet UIScrollView *m_signupView;
 @property (strong, nonatomic) IBOutlet UITextField *m_babyName;
 @property (strong, nonatomic) IBOutlet UIButton *m_SignupButton;
+
 - (IBAction)onSignupBtn:(id)sender;
+- (IBAction)onPhotoBtn:(id)sender;
 
 @end

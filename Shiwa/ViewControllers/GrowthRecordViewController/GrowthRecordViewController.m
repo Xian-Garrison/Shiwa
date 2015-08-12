@@ -8,12 +8,17 @@
 
 #import "GrowthRecordViewController.h"
 #import "GrowthRecordViewCell.h"
+#import "UzysAssetsPickerController.h"
 
 @interface GrowthRecordViewController ()
 
 @end
 
 @implementation GrowthRecordViewController
+{
+    UIImagePickerController *mPickerPhoto;
+    UIImagePickerController *mPickerBack;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +36,8 @@
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapOnTableView:)];
     [self.m_growthRecordTable addGestureRecognizer:tap];
+    
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 - (void)didTapOnTableView:(UIGestureRecognizer *) recognizer {
@@ -40,7 +47,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.tabBarController.tabBar setHidden:NO];
+    
     [super viewWillAppear:animated];
 }
 
@@ -129,11 +136,30 @@
     return nHeight;
 }
 
+- (IBAction)onPhotoBtn:(id)sender {
+    mPickerPhoto = [[UIImagePickerController alloc] init];
+    mPickerPhoto.delegate = self;
+    mPickerPhoto.allowsEditing = YES;
+    mPickerPhoto.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:mPickerPhoto animated:YES completion:NULL];
+}
+
+- (IBAction)onBackPhotoBtn:(id)sender {
+    mPickerBack = [[UIImagePickerController alloc] init];
+    mPickerBack.delegate = self;
+    mPickerBack.allowsEditing = YES;
+    mPickerBack.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:mPickerBack animated:YES completion:NULL];
+}
 
 #pragma mark - UIActionSheetDelegate
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 1) {
+    NSString *title = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if ([title isEqualToString:@"删除"])
+    {
         [self onBtnDelete];
     }
     
@@ -141,4 +167,94 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
+/*
+- (BOOL)shouldStartCameraController {
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
+        return NO;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
+        && [[UIImagePickerController availableMediaTypesForSourceType:
+             UIImagePickerControllerSourceTypeCamera] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeImage, nil];
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        } else if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        }
+        
+    } else {
+        return NO;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.showsCameraControls = YES;
+    cameraUI.delegate = self;
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
+    
+    return YES;
+}
+
+- (BOOL)shouldStartPhotoLibraryPickerController {
+    if (([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary] == NO
+         && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)) {
+        return NO;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]
+        && [[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypePhotoLibrary] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeImage, nil];
+        
+    } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]
+               && [[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeImage, nil];
+        
+    } else {
+        return NO;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.delegate = self;
+    
+    
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
+    
+    return YES;
+}
+*/
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    if (picker == mPickerPhoto) {
+        [self.m_photoButton setImage:image forState:UIControlStateNormal];
+        [self.m_photoButton.layer setBorderWidth:2.0f];
+        [self.m_photoButton.layer setBorderColor:[[UIColor colorWithRed:238.0/255.0 green:238.0/255.0 blue:238.0/255.0 alpha:1.0] CGColor]];
+        [self.m_photoButton.layer setCornerRadius:5.0f];
+        [self.m_photoButton setImageEdgeInsets:UIEdgeInsetsMake(2,2,2,2)];
+    }
+    else if (picker == mPickerBack) {
+        [self.m_backgroundButton setImage:image forState:UIControlStateNormal];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end

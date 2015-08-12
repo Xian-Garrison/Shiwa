@@ -31,7 +31,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.tabBarController.tabBar setHidden:YES];
+//    [self.tabBarController.tabBar setHidden:YES];
     [super viewWillAppear:animated];
 }
 
@@ -51,7 +51,10 @@
 */
 
 - (IBAction)onCloseBtn:(id)sender {
-    [self performSegueWithIdentifier:@"option2Record" sender:nil];
+    UINavigationController *nav = (UINavigationController *)self.presentingViewController;
+    [self dismissViewControllerAnimated:YES completion:^ {
+
+    }];
 }
 
 - (IBAction)onTextBtn:(id)sender {

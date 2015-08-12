@@ -18,4 +18,5 @@
 @property (nonatomic, strong) THDatePickerViewController * datePicker;
 @property (strong, nonatomic) IBOutlet UILabel *m_dateString;
 @property (strong, nonatomic) IBOutlet UILabel *m_timeString;
+@property (strong, nonatomic) IBOutlet UIView *contentView;
 @end

@@ -87,7 +87,7 @@
         <scene sceneID="xjQ-Dj-KSf">
             <objects>
                 <navigationController navigationBarHidden="YES" id="IVO-6a-cTv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="tab_plus_btn.png" id="Cvh-QA-stO"/>
+                    <tabBarItem key="tabBarItem" title="" id="Cvh-QA-stO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uIa-vF-b0O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -120,7 +120,7 @@
         <!--Post Option View Controller-->
         <scene sceneID="gzi-C4-jew">
             <objects>
-                <viewController id="3nI-Gi-m1G" customClass="PostOptionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostOptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3nI-Gi-m1G" customClass="PostOptionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yuy-Rn-BD8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,6 +258,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xjG-Vg-71h" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3227" y="1226"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1HN-k0-RI8">
+            <objects>
+                <viewController id="9pY-wU-vbh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rpi-uy-n6I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="zkS-fR-fFa"/>
+                    <navigationItem key="navigationItem" id="fgB-ZB-JtO"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZR-fv-YsW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2782" y="606"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="6hc-lA-dx4">
@@ -919,14 +937,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="725"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_back.png" id="W5u-XI-rCv">
-                                                <rect key="frame" x="105" y="32" width="108" height="108"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_image_default.png" id="Efw-fT-8mz">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AIv-fe-hHk">
                                                 <rect key="frame" x="109" y="36" width="102" height="102"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
+                                                <state key="normal" image="profile_image_default.png">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onPhotoBtn:" destination="1Sz-GM-N3y" eventType="touchUpInside" id="RYU-Q0-ep3"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sRw-cp-Mhk">
                                                 <rect key="frame" x="25" y="166" width="47" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1083,6 +1103,7 @@
                         <outlet property="m_SignupButton" destination="Q3C-AR-c3c" id="4oI-W8-LS9"/>
                         <outlet property="m_UserEmail" destination="DMP-Fn-yPd" id="jN3-8P-eVb"/>
                         <outlet property="m_babyName" destination="pQZ-ch-pBx" id="5Zb-jQ-M5z"/>
+                        <outlet property="m_photoButton" destination="AIv-fe-hHk" id="rIW-gG-mk6"/>
                         <outlet property="m_signupView" destination="fDf-0c-80t" id="O1r-ou-Nuy"/>
                         <outlet property="month_comboBox" destination="KeD-U9-4MV" id="bXa-8V-70p"/>
                         <outlet property="provice_comboBox" destination="A0I-VE-o3Z" id="5fe-MP-dbB"/>
@@ -1110,7 +1131,7 @@
                     <connections>
                         <segue destination="m9p-BG-Yjz" kind="relationship" relationship="viewControllers" id="tC9-kY-QtB"/>
                         <segue destination="AU1-T9-aKj" kind="relationship" relationship="viewControllers" id="MpB-dM-NKb"/>
-                        <segue destination="IVO-6a-cTv" kind="relationship" relationship="viewControllers" id="7CF-gy-DXs"/>
+                        <segue destination="9pY-wU-vbh" kind="relationship" relationship="viewControllers" id="j1a-T0-9v5"/>
                         <segue destination="s1F-Bg-Rfs" kind="relationship" relationship="viewControllers" id="80m-30-K8f"/>
                         <segue destination="CW7-C0-7jO" kind="relationship" relationship="viewControllers" id="U2o-Xm-IvH"/>
                     </connections>
@@ -1176,10 +1197,16 @@
                                 <rect key="frame" x="0.0" y="55" width="320" height="231"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_background.png" id="BZ3-Ly-yFu">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qfO-1Q-8P0">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <state key="normal" image="profile_background.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBackPhotoBtn:" destination="41L-c3-zfu" eventType="touchUpInside" id="mZD-Mn-a0U"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="成长记  Julian" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jwu-rz-y1Y">
                                         <rect key="frame" x="113" y="124" width="107" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1208,10 +1235,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_user_image.png" id="Dyl-eA-sGn">
-                                        <rect key="frame" x="15" y="129" width="81" height="81"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_location_image.png" id="tZJ-5s-AJP">
                                         <rect key="frame" x="113" y="166" width="17" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1242,6 +1265,16 @@
                                         <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mTr-PS-Cio">
+                                        <rect key="frame" x="15" y="129" width="81" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="profile_user_image.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPhotoBtn:" destination="41L-c3-zfu" eventType="touchUpInside" id="3eL-kb-itW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                             </view>
@@ -1422,7 +1455,9 @@
                         <outlet property="m_babyName" destination="jwu-rz-y1Y" id="0fS-7y-kuK"/>
                         <outlet property="m_babyPos" destination="B1t-px-zEd" id="7S7-OU-Erf"/>
                         <outlet property="m_babyTitle" destination="uAz-UO-J4s" id="eIn-a3-qT9"/>
+                        <outlet property="m_backgroundButton" destination="qfO-1Q-8P0" id="dJC-fs-jQo"/>
                         <outlet property="m_growthRecordTable" destination="dDY-1U-1Q2" id="vYq-Kc-CKH"/>
+                        <outlet property="m_photoButton" destination="mTr-PS-Cio" id="Ijk-UN-Adt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOt-e6-6Yw" sceneMemberID="firstResponder"/>
@@ -2203,6 +2238,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="contentView" destination="Znc-Wh-1iN" id="dqQ-9N-zpu"/>
                         <outlet property="m_dateString" destination="GMu-O1-iLg" id="aSt-0m-aST"/>
                         <outlet property="m_timeString" destination="ptA-mB-1g2" id="YxY-St-GH2"/>
                     </connections>
@@ -2249,7 +2285,6 @@
         <image name="profile_comment_image.png" width="28" height="28"/>
         <image name="profile_event_back.png" width="191" height="32"/>
         <image name="profile_forward_image.png" width="28" height="28"/>
-        <image name="profile_image_back.png" width="131" height="131"/>
         <image name="profile_image_default.png" width="130" height="130"/>
         <image name="profile_like_image.png" width="28" height="28"/>
         <image name="profile_location_image.png" width="20" height="20"/>
@@ -2261,7 +2296,6 @@
         <image name="profile_tree_btn.png" width="27" height="27"/>
         <image name="profile_user_image.png" width="97" height="97"/>
         <image name="tab_home_btn.png" width="26" height="26"/>
-        <image name="tab_plus_btn.png" width="49" height="41"/>
         <image name="tab_profile_btn.png" width="26" height="26"/>
         <image name="tab_record_btn.png" width="22" height="22"/>
         <image name="tab_relative_btn.png" width="24" height="20"/>
@@ -2272,12 +2306,12 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kSD-P8-3iK"/>
+        <segue reference="lKN-5m-Id3"/>
         <segue reference="yqO-vK-XkD"/>
-        <segue reference="VdI-vy-Zb7"/>
-        <segue reference="G4W-hB-mbF"/>
-        <segue reference="HSt-cN-uJp"/>
+        <segue reference="Uht-Wq-BYZ"/>
         <segue reference="4l2-wJ-GGb"/>
+        <segue reference="G4W-hB-mbF"/>
         <segue reference="I1Z-8b-fGS"/>
+        <segue reference="HSt-cN-uJp"/>
     </inferredMetricsTieBreakers>
 </document>

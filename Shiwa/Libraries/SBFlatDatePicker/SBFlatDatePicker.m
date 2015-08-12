@@ -186,7 +186,7 @@ const float LBL_BORDER_OFFSET = 8.0;
     
     //Create array Hours
     NSMutableArray *arrHours = [[NSMutableArray alloc] initWithCapacity:24];
-    for(int i=1; i<=24; i++) {
+    for(int i=0; i<24; i++) {
         [arrHours addObject:[NSString stringWithFormat:@"%@%d",(i<10) ? @"0":@"", i]];
     }
     _arrHours = [NSArray arrayWithArray:arrHours];

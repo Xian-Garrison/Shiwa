@@ -16,6 +16,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *m_babyAge;
 @property (strong, nonatomic) IBOutlet UILabel *m_babyFans;
 @property (strong, nonatomic) IBOutlet UILabel *m_babyFriends;
+@property (strong, nonatomic) IBOutlet UIButton *m_photoButton;
+@property (strong, nonatomic) IBOutlet UIButton *m_backgroundButton;
+
+- (IBAction)onPhotoBtn:(id)sender;
+- (IBAction)onBackPhotoBtn:(id)sender;
 
 
 @end

@@ -94,7 +94,9 @@
     [datePicker setBackgroundColor:[UIColor whiteColor]];
     
     //Set the data picker as view of the new view controller
+    //[self.contentView addSubview:datePicker];
     [self setView:datePicker];
+    
     
 }
 
