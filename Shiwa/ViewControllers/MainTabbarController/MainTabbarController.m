@@ -32,13 +32,19 @@
     item.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     [item setTitlePositionAdjustment:UIOffsetMake(0, 0)];
 
+    item = [self.tabBar.items objectAtIndex:2];
+    
+    item.image = [[UIImage imageNamed:@"tab_plus_btn.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    [item setTitlePositionAdjustment:UIOffsetMake(0, 0)];
+    /*
     UIButton *plusButton = [UIButton buttonWithType:UIButtonTypeCustom];
     plusButton.frame = CGRectMake( self.tabBar.bounds.size.width / 2 - 16, 8, 32, 32);
     [plusButton setImage:[UIImage imageNamed:@"tab_plus_btn.png"] forState:UIControlStateNormal];
     [plusButton setImage:[UIImage imageNamed:@"tab_plus_btn.png"] forState:UIControlStateHighlighted];
     [plusButton addTarget:self action:@selector(plusButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.tabBar addSubview:plusButton];
-    
+    */
     // notify
     item = [self.tabBar.items objectAtIndex:3];
     
@@ -63,7 +69,8 @@
 - (void)plusButtonAction:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     PostOptionViewController *poVC = [storyboard instantiateViewControllerWithIdentifier:@"PostOptionViewController"];
-    [self presentViewController:poVC animated:YES completion:nil];
+    [self.navigationController pushViewController:poVC animated:YES];
+    //[self presentViewController:poVC animated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation

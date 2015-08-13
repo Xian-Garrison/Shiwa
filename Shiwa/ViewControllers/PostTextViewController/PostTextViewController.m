@@ -8,6 +8,7 @@
 
 #import "PostTextViewController.h"
 #import "PostSearchLocationViewController.h"
+#import "GrowthRecordViewController.h"
 
 @interface PostTextViewController ()
 
@@ -94,7 +95,7 @@
 }
 
 - (IBAction)onBackBtn:(id)sender {
-    [self performSegueWithIdentifier:@"text2Option" sender:nil];
+    [self performSegueWithIdentifier:@"text2Record" sender:nil];
 }
 
 - (IBAction)onReleaseBtn:(id)sender {

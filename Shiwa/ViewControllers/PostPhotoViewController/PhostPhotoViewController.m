@@ -121,7 +121,13 @@
 }
 
 - (IBAction)onBackBtn:(id)sender {
-    [self performSegueWithIdentifier:@"photo2Option" sender:nil];
+    /*
+    UINavigationController *nav = (UINavigationController *)self.presentingViewController;
+    [self dismissViewControllerAnimated:YES completion:^ {
+        
+    }];
+    */
+    [self performSegueWithIdentifier:@"photo2Record" sender:nil];
 }
 
 - (IBAction)onReleaseBtn:(id)sender {

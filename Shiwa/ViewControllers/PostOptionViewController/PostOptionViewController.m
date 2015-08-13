@@ -9,6 +9,8 @@
 #import "PostOptionViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import "UzysAssetsPickerController.h"
+#import "PhostPhotoViewController.h"
+#import "PostTextViewController.h"
 
 @interface PostOptionViewController ()
 
@@ -31,7 +33,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//    [self.tabBarController.tabBar setHidden:YES];
+    [self.tabBarController.tabBar setHidden:YES];
     [super viewWillAppear:animated];
 }
 
@@ -51,17 +53,17 @@
 */
 
 - (IBAction)onCloseBtn:(id)sender {
-    UINavigationController *nav = (UINavigationController *)self.presentingViewController;
-    [self dismissViewControllerAnimated:YES completion:^ {
-
-    }];
+//    [self.tabBarController setSelectedIndex:3];
+    [self performSegueWithIdentifier:@"option2Record" sender:nil];
 }
 
 - (IBAction)onTextBtn:(id)sender {
+
     [self performSegueWithIdentifier:@"option2Text" sender:nil];
 }
 
 - (IBAction)onCamerarollBtn:(id)sender {
+    
 #if 0
     UzysAppearanceConfig *appearanceConfig = [[UzysAppearanceConfig alloc] init];
     appearanceConfig.finishSelectionButtonColor = [UIColor blueColor];
@@ -88,7 +90,7 @@
     [[UIApplication sharedApplication] setStatusBarHidden:self.wasStatusBarHidden withAnimation:UIStatusBarAnimationSlide];
     [self setWantsFullScreenLayout:self.wasFullScreenLayout];
 #endif
-    
+
     [self performSegueWithIdentifier:@"option2Photo" sender:nil];
 }
 

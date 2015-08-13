@@ -134,6 +134,7 @@
 		9034AE961B75778D0047CA79 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE921B75778D0047CA79 /* README.md */; };
 		9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */; };
 		904809471B7967B000246B06 /* SBFlatDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 904809451B7967B000246B06 /* SBFlatDatePicker.m */; };
+		90DE4A211B7C2E0800389072 /* plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A201B7C2E0800389072 /* plus_button.png */; };
 		90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F906D71B75799F003E6BC7 /* Images.xcassets */; };
 		90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906D91B75799F003E6BC7 /* THDateDay.m */; };
 		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
@@ -306,6 +307,7 @@
 		904809441B7967B000246B06 /* SBFlatDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFlatDatePicker.h; sourceTree = "<group>"; };
 		904809451B7967B000246B06 /* SBFlatDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFlatDatePicker.m; sourceTree = "<group>"; };
 		904809461B7967B000246B06 /* SBFlatDatePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFlatDatePickerDelegate.h; sourceTree = "<group>"; };
+		90DE4A201B7C2E0800389072 /* plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_button.png; sourceTree = "<group>"; };
 		90F906D71B75799F003E6BC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90F906D81B75799F003E6BC7 /* THDateDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDateDay.h; sourceTree = "<group>"; };
 		90F906D91B75799F003E6BC7 /* THDateDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDateDay.m; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 		90001C531B66BADD00E4F6D7 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4A1F1B7C2E0800389072 /* Friend */,
 				9034AA4D1B73134C0047CA79 /* CreatePost */,
 				9034AA4C1B73104C0047CA79 /* others */,
 				9034AA4B1B73103C0047CA79 /* tabBar */,
@@ -773,6 +776,14 @@
 			path = Libraries/SBFlatDatePicker;
 			sourceTree = "<group>";
 		};
+		90DE4A1F1B7C2E0800389072 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4A201B7C2E0800389072 /* plus_button.png */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
 		90F906D61B75799F003E6BC7 /* THCalendarDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -899,6 +910,7 @@
 				90001C711B66BADD00E4F6D7 /* signup_signup_btn.png in Resources */,
 				90001C641B66BADD00E4F6D7 /* baby_complete_btn.png in Resources */,
 				90001C661B66BADD00E4F6D7 /* baby_notification.png in Resources */,
+				90DE4A211B7C2E0800389072 /* plus_button.png in Resources */,
 				90001C721B66BADD00E4F6D7 /* verify_btn.png in Resources */,
 				90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */,
 				9034AA271B71A73F0047CA79 /* profile_lock_image.png in Resources */,
