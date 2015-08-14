@@ -86,6 +86,7 @@
 }
 
 - (IBAction)onTimeBtn:(id)sender {
+/*
     //Init the datePicker view and set self as delegate
     SBFlatDatePicker *datePicker = [[SBFlatDatePicker alloc] initWithFrame:self.view.bounds];
     [datePicker setDelegate:self];
@@ -96,7 +97,7 @@
     //Set the data picker as view of the new view controller
     //[self.contentView addSubview:datePicker];
     [self setView:datePicker];
-    
+*/
     
 }
 

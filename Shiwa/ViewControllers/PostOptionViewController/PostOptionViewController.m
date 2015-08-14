@@ -320,7 +320,7 @@
 
 - (IBAction)onIssueBtn:(id)sender {
 //    [self performSegueWithIdentifier:@"option2Photo" sender:nil];
-    
+    [self performSegueWithIdentifier:@"option2Tag" sender:nil];
 }
 
 @end

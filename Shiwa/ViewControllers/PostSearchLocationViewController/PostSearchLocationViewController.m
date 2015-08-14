@@ -11,6 +11,7 @@
 #import "PostTextViewController.h"
 #import "PhostPhotoViewController.h"
 #import "PostVideoViewController.h"
+#import "PostTagViewController.h"
 
 @interface PostSearchLocationViewController ()
 
@@ -80,6 +81,10 @@
     {
         [self performSegueWithIdentifier:@"location2Video" sender:nil];
     }
+    else if ([self.segueName isEqualToString:@"tag2Location"])
+    {
+        [self performSegueWithIdentifier:@"location2Tag" sender:nil];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -105,6 +110,10 @@
     else if ([[segue identifier] isEqualToString:@"location2Video"]) {
         PostVideoViewController* postVideoViewController = [segue destinationViewController];
         postVideoViewController.bLocationSelected = TRUE;
+    }
+    else if ([[segue identifier] isEqualToString:@"location2Tag"]) {
+        PostTagViewController* postTagViewController = [segue destinationViewController];
+        postTagViewController.bLocationSelected = TRUE;
     }
 }
 @end
