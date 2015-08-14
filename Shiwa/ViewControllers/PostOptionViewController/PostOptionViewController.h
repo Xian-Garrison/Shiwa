@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PostOptionViewController : UIViewController
+@interface PostOptionViewController : UIViewController <UIActionSheetDelegate, UIImagePickerControllerDelegate> {
+    UIImage *mImage;
+    NSURL *mUrlMovie;
+}
 - (IBAction)onCloseBtn:(id)sender;
 - (IBAction)onTextBtn:(id)sender;
 - (IBAction)onCamerarollBtn:(id)sender;

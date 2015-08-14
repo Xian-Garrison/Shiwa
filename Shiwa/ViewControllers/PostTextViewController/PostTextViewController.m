@@ -106,6 +106,11 @@
 }
 
 - (IBAction)onCircleBtn:(id)sender {
+    _dataSource = [[NSMutableArray alloc] initWithObjects:@"亲友团", @"晒娃圈", @"只限本人", nil];
+    SHMultipleSelect *multipleSelect = [[SHMultipleSelect alloc] init];
+    multipleSelect.delegate = self;
+    multipleSelect.rowsCount = _dataSource.count;
+    [multipleSelect show];
 }
 
 - (IBAction)onEventBtn:(id)sender {
@@ -122,6 +127,35 @@
         [self.m_eventButton setImage:btnImage forState:UIControlStateNormal];
         self.m_eventLabel.textColor = [UIColor colorWithRed:(189/255.f) green:(189/255.f) blue:(189/255.f) alpha:1.0];
     }
+}
+
+#pragma mark - SHMultipleSelectDelegate
+- (void)multipleSelectView:(SHMultipleSelect*)multipleSelectView clickedBtnAtIndex:(NSInteger)clickedBtnIndex withSelectedIndexPaths:(NSArray *)selectedIndexPaths {
+
+    for (NSIndexPath *indexPath in selectedIndexPaths) {
+        if (indexPath.row == 0)
+        {
+            UIImage *postTypeImage = [UIImage imageNamed:@"profile_person_white_image.png"];
+            [self.m_postTypeImage setImage:postTypeImage];
+            self.m_postTypeLabel.text = @"亲友团";
+        }
+        else if (indexPath.row == 1)
+        {
+            UIImage *postTypeImage = [UIImage imageNamed:@"profile_global_white_image.png"];
+            [self.m_postTypeImage setImage:postTypeImage];
+            self.m_postTypeLabel.text = @"晒娃圈";
+        }
+        else if (indexPath.row == 2)
+        {
+            UIImage *postTypeImage = [UIImage imageNamed:@"profile_lock_white_image.png"];
+            [self.m_postTypeImage setImage:postTypeImage];
+            self.m_postTypeLabel.text = @"只限本人";
+        }
+    }
+}
+
+- (NSString*)multipleSelectView:(SHMultipleSelect*)multipleSelectView titleForRowAtIndexPath:(NSIndexPath*)indexPath {
+    return _dataSource[indexPath.row];
 }
 
 -(void)dismissKeyboard {

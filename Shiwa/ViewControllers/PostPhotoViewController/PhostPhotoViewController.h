@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHMultipleSelect.h"
 
-@interface PhostPhotoViewController : UIViewController
+@interface PhostPhotoViewController : UIViewController <SHMultipleSelectDelegate>
+{
+    UIButton *_btn;
+    NSMutableArray *_dataSource;
+}
 - (IBAction)onLocationBtn:(id)sender;
 - (IBAction)onEditDatetimeBtn:(id)sender;
 - (IBAction)onBackBtn:(id)sender;
@@ -31,6 +36,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *m_photoButton1;
 @property (strong, nonatomic) IBOutlet UIButton *m_photoButton2;
 @property (strong, nonatomic) IBOutlet UIButton *m_photoButton3;
+@property (strong, nonatomic) IBOutlet UILabel *m_postTypeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *m_postTypeImage;
 
 @property (assign)  BOOL bLocationSelected;
 @end

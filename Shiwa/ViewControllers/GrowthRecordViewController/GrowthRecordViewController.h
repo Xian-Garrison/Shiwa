@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SHMultipleSelect.h"
 
-@interface GrowthRecordViewController : UIViewController
+@interface GrowthRecordViewController : UIViewController <SHMultipleSelectDelegate>
+{
+    NSMutableArray *_dataSource;
+}
 @property (strong, nonatomic) IBOutlet UITableView *m_growthRecordTable;
 @property (strong, nonatomic) IBOutlet UILabel *m_babyName;
 @property (strong, nonatomic) IBOutlet UILabel *m_babyTitle;

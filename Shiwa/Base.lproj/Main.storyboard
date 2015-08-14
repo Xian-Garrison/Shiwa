@@ -235,6 +235,7 @@
                         <segue destination="zKJ-jX-7pm" kind="push" identifier="option2Text" id="M9c-B6-lLf"/>
                         <segue destination="ndJ-dj-fhO" kind="push" identifier="option2Photo" id="ORV-Xq-AY9"/>
                         <segue destination="41L-c3-zfu" kind="push" identifier="option2Record" id="66R-b3-IKZ"/>
+                        <segue destination="8cc-Eb-TnE" kind="push" identifier="option2Video" id="a0G-Uc-PG9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NXQ-BY-n4X" sceneMemberID="firstResponder"/>
@@ -1501,10 +1502,10 @@
                                             <outlet property="m_babyDescription" destination="o7A-mJ-E7A" id="f3r-CE-hSu"/>
                                             <outlet property="m_babyImage" destination="HfP-HZ-Zjw" id="eH1-oW-mdB"/>
                                             <outlet property="m_datetemperature" destination="fDX-Rh-ReU" id="4BH-xV-tbR"/>
-                                            <outlet property="m_lockButton" destination="ZUN-1R-hpl" id="ADW-FG-ksy"/>
                                             <outlet property="m_postButton" destination="fbV-4v-seZ" id="P9H-hZ-Rby"/>
                                             <outlet property="m_postPlace" destination="AUV-ZS-FXM" id="lHw-Db-lKk"/>
                                             <outlet property="m_postTime" destination="E2O-4j-1nY" id="3B0-DS-6ph"/>
+                                            <outlet property="m_postTypeButton" destination="ZUN-1R-hpl" id="2Ur-9e-7sK"/>
                                             <outlet property="m_weatherImage" destination="5Tb-Vi-Jdd" id="myf-aw-bQl"/>
                                         </connections>
                                     </tableViewCell>
@@ -1936,7 +1937,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clj-rf-aCW">
-                                        <rect key="frame" x="70" y="173" width="52" height="21"/>
+                                        <rect key="frame" x="76" y="173" width="52" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
                                         <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1952,19 +1953,19 @@
                                             <action selector="onCircleBtn:" destination="zKJ-jX-7pm" eventType="touchUpInside" id="6j1-3d-83H"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晒娃圈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2z7-Vq-hgE">
-                                        <rect key="frame" x="229" y="173" width="41" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晒娃圈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2z7-Vq-hgE">
+                                        <rect key="frame" x="220" y="173" width="53" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_global_image.png" id="4aI-eh-PkX">
-                                        <rect key="frame" x="201" y="172" width="24" height="24"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_global_white_image.png" id="4aI-eh-PkX">
+                                        <rect key="frame" x="198" y="177" width="14" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_location_image.png" id="bfH-PK-ibg">
-                                        <rect key="frame" x="46" y="172" width="24" height="24"/>
+                                        <rect key="frame" x="41" y="172" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大事件" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1GO-Xe-awl">
@@ -2014,6 +2015,8 @@
                         <outlet property="m_locationText" destination="clj-rf-aCW" id="IfW-ZA-MuT"/>
                         <outlet property="m_postContext" destination="El6-2G-gIp" id="j9m-UC-CWI"/>
                         <outlet property="m_postDatetime" destination="gjs-4B-bBh" id="kcB-5P-CJs"/>
+                        <outlet property="m_postTypeImage" destination="4aI-eh-PkX" id="ZdV-56-Yoe"/>
+                        <outlet property="m_postTypeLabel" destination="2z7-Vq-hgE" id="lpn-bj-qmF"/>
                         <outlet property="m_releaseButton" destination="eWj-na-8vK" id="RqX-yP-m7R"/>
                         <segue destination="Nbo-RA-s00" kind="push" identifier="text2Location" id="HSt-cN-uJp"/>
                         <segue destination="41L-c3-zfu" kind="push" identifier="text2Record" id="Yfj-Er-rsW"/>
@@ -2105,7 +2108,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ICg-k7-5ga">
-                                        <rect key="frame" x="70" y="263" width="52" height="21"/>
+                                        <rect key="frame" x="76" y="263" width="52" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
                                         <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2121,19 +2124,19 @@
                                             <action selector="onCircleBtn:" destination="ndJ-dj-fhO" eventType="touchUpInside" id="vlQ-r3-oUn"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晒娃圈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gVo-mF-rrE">
-                                        <rect key="frame" x="229" y="263" width="41" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晒娃圈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gVo-mF-rrE">
+                                        <rect key="frame" x="220" y="263" width="53" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_global_image.png" id="UVH-s2-Snc">
-                                        <rect key="frame" x="201" y="262" width="24" height="24"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_global_white_image.png" id="UVH-s2-Snc">
+                                        <rect key="frame" x="198" y="267" width="14" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_location_image.png" id="Q3R-45-JYK">
-                                        <rect key="frame" x="46" y="262" width="24" height="24"/>
+                                        <rect key="frame" x="41" y="262" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大事件" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c53-0F-zHF">
@@ -2236,6 +2239,8 @@
                         <outlet property="m_photoButton3" destination="bGe-VY-fAg" id="6KT-1e-Obf"/>
                         <outlet property="m_postContext" destination="eyc-kG-Tq8" id="GME-q0-pTK"/>
                         <outlet property="m_postDatetime" destination="O5o-FP-MUP" id="AoZ-MA-PTG"/>
+                        <outlet property="m_postTypeImage" destination="UVH-s2-Snc" id="81P-ui-B03"/>
+                        <outlet property="m_postTypeLabel" destination="gVo-mF-rrE" id="RbW-ch-hX9"/>
                         <segue destination="pW3-HM-hzd" kind="push" identifier="photo2Datetime" id="Elo-nB-k4M"/>
                         <segue destination="Nbo-RA-s00" kind="push" identifier="photo2Location" id="P4M-9u-d0p"/>
                         <segue destination="41L-c3-zfu" kind="push" identifier="photo2Record" id="fD5-pe-HHy"/>
@@ -2244,6 +2249,194 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWG-tU-oee" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3678" y="-691"/>
+        </scene>
+        <!--Post Video View Controller-->
+        <scene sceneID="y5q-Nu-tr3">
+            <objects>
+                <viewController storyboardIdentifier="PostVideoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8cc-Eb-TnE" userLabel="Post Video View Controller" customClass="PostVideoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1qQ-WE-dOT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="5iT-xf-moG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bwB-vt-jO3" userLabel="Back">
+                                        <rect key="frame" x="11" y="28" width="19" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="back_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBackBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="Kqs-wM-zZs"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fcr-Lb-7pS">
+                                        <rect key="frame" x="128" y="27" width="65" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yTy-oJ-7As" userLabel="TreeButton">
+                                        <rect key="frame" x="260" y="23" width="60" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onReleaseBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="wvY-Nm-ePp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发布" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1LN-RO-SqR">
+                                        <rect key="frame" x="263" y="26" width="55" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zo5-yn-yL6" userLabel="Back">
+                                        <rect key="frame" x="231" y="28" width="19" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_video_white_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCameraBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="LlQ-8g-WCI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="3Dp-Kf-M7f">
+                                <rect key="frame" x="0.0" y="55" width="320" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="宝宝今天发生了哪些趣味事呢？" minimumFontSize="17" id="U1M-xH-KiG" userLabel="I">
+                                        <rect key="frame" x="8" y="8" width="304" height="146"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5d4-Nk-SmZ">
+                                        <rect key="frame" x="17" y="169" width="135" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_empty_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onLocationBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="cUl-T5-jNZ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_divide_bar.png" id="c7z-6k-oWt">
+                                        <rect key="frame" x="0.0" y="211" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_divide_bar.png" id="q7n-Cg-vfZ">
+                                        <rect key="frame" x="0.0" y="258" width="320" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择地点" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xja-uV-x1R">
+                                        <rect key="frame" x="76" y="173" width="52" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
+                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y7L-35-cnU">
+                                        <rect key="frame" x="168" y="169" width="135" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_fill_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCircleBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="z5Q-Yh-i6A"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晒娃圈" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="f3n-nQ-qgo">
+                                        <rect key="frame" x="220" y="173" width="53" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_global_white_image.png" id="dHc-1x-TJt">
+                                        <rect key="frame" x="198" y="177" width="14" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="create_location_image.png" id="FsS-tF-VRJ">
+                                        <rect key="frame" x="41" y="172" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大事件" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ohq-Uk-Z7n">
+                                        <rect key="frame" x="51" y="225" width="44" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
+                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_seperator.png" id="Xmk-OZ-mRC">
+                                        <rect key="frame" x="115" y="227" width="1" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/07/08  10:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hWO-rR-F0h">
+                                        <rect key="frame" x="184" y="225" width="103" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
+                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nYz-RB-wNH" userLabel="Back">
+                                        <rect key="frame" x="20" y="223" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_big_event_image.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onEventBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="WdL-ta-lKo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="byF-Hb-sOj" userLabel="Back">
+                                        <rect key="frame" x="287" y="222" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_edit_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onEditDatetimeBtn:" destination="8cc-Eb-TnE" eventType="touchUpInside" id="qLl-fQ-StN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="DgY-dv-XKN"/>
+                    <navigationItem key="navigationItem" id="Tqf-z2-d5p"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="m_circleButton" destination="y7L-35-cnU" id="E84-us-yxQ"/>
+                        <outlet property="m_eventButton" destination="nYz-RB-wNH" id="YrV-HZ-Qmz"/>
+                        <outlet property="m_eventLabel" destination="Ohq-Uk-Z7n" id="EiY-Ln-5bH"/>
+                        <outlet property="m_locationButton" destination="5d4-Nk-SmZ" id="VGD-Ah-zUk"/>
+                        <outlet property="m_locationImage" destination="FsS-tF-VRJ" id="Uh4-WA-mte"/>
+                        <outlet property="m_locationText" destination="xja-uV-x1R" id="RCN-qD-0io"/>
+                        <outlet property="m_postContext" destination="U1M-xH-KiG" id="slZ-am-yQ3"/>
+                        <outlet property="m_postDatetime" destination="hWO-rR-F0h" id="sng-4L-Khx"/>
+                        <outlet property="m_postTypeImage" destination="dHc-1x-TJt" id="sR4-FC-chE"/>
+                        <outlet property="m_postTypeLabel" destination="f3n-nQ-qgo" id="4PO-i4-huJ"/>
+                        <outlet property="m_releaseButton" destination="yTy-oJ-7As" id="LB5-e5-7ND"/>
+                        <segue destination="Nbo-RA-s00" kind="push" identifier="video2Location" id="bEf-va-TCU"/>
+                        <segue destination="41L-c3-zfu" kind="push" identifier="video2Record" id="Xan-rM-dxG"/>
+                        <segue destination="pW3-HM-hzd" kind="push" identifier="video2Datetime" id="7Rt-6P-L9S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlQ-1O-tHT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3678" y="601"/>
         </scene>
         <!--Post Search Location View Controller-->
         <scene sceneID="2Bm-th-Njh">
@@ -2339,6 +2532,7 @@
                         <outlet property="searchDisplayController" destination="NR5-ie-acO" id="uV5-vd-RBd"/>
                         <segue destination="zKJ-jX-7pm" kind="push" identifier="location2Text" id="usn-2i-B4H"/>
                         <segue destination="ndJ-dj-fhO" kind="push" identifier="location2Photo" id="DiK-QO-bq0"/>
+                        <segue destination="8cc-Eb-TnE" kind="push" identifier="location2Video" id="6Ri-dT-JIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mgj-En-YpM" sceneMemberID="firstResponder"/>
@@ -2587,7 +2781,6 @@
         <image name="create_edit_button.png" width="41" height="41"/>
         <image name="create_empty_button.png" width="160" height="36"/>
         <image name="create_fill_button.png" width="158" height="34"/>
-        <image name="create_global_image.png" width="28" height="28"/>
         <image name="create_issue_button.png" width="77" height="77"/>
         <image name="create_location_image.png" width="28" height="28"/>
         <image name="create_option_image.png" width="177" height="28"/>
@@ -2597,6 +2790,7 @@
         <image name="create_takephoto_button.png" width="77" height="77"/>
         <image name="create_takevideo_button.png" width="77" height="77"/>
         <image name="create_text_button.png" width="77" height="77"/>
+        <image name="create_video_white_button.png" width="23" height="21"/>
         <image name="login_divide_bar.png" width="317" height="3"/>
         <image name="login_phone_countrynum.png" width="70" height="40"/>
         <image name="login_wechat_btn.png" width="315" height="45"/>
@@ -2610,6 +2804,7 @@
         <image name="profile_comment_image.png" width="28" height="28"/>
         <image name="profile_event_back.png" width="191" height="32"/>
         <image name="profile_forward_image.png" width="28" height="28"/>
+        <image name="profile_global_white_image.png" width="16" height="16"/>
         <image name="profile_image_default.png" width="130" height="130"/>
         <image name="profile_like_image.png" width="28" height="28"/>
         <image name="profile_location_image.png" width="20" height="20"/>
@@ -2633,9 +2828,11 @@
     <inferredMetricsTieBreakers>
         <segue reference="yqO-vK-XkD"/>
         <segue reference="lKN-5m-Id3"/>
-        <segue reference="ORV-Xq-AY9"/>
-        <segue reference="M9c-B6-lLf"/>
-        <segue reference="P4M-9u-d0p"/>
-        <segue reference="fD5-pe-HHy"/>
+        <segue reference="a0G-Uc-PG9"/>
+        <segue reference="Xan-rM-dxG"/>
+        <segue reference="bEf-va-TCU"/>
+        <segue reference="7Rt-6P-L9S"/>
+        <segue reference="usn-2i-B4H"/>
+        <segue reference="DiK-QO-bq0"/>
     </inferredMetricsTieBreakers>
 </document>

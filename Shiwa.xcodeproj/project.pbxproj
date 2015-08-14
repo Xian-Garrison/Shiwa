@@ -135,6 +135,18 @@
 		9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 9034AE941B75778D0047CA79 /* UIViewController+KNSemiModal.m */; };
 		904809471B7967B000246B06 /* SBFlatDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 904809451B7967B000246B06 /* SBFlatDatePicker.m */; };
 		90DE4A211B7C2E0800389072 /* plus_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A201B7C2E0800389072 /* plus_button.png */; };
+		90DE4A291B7D412100389072 /* SHMultipleSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A241B7D412100389072 /* SHMultipleSelect.m */; };
+		90DE4A2A1B7D412100389072 /* UIImage+SHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A261B7D412100389072 /* UIImage+SHAdditions.m */; };
+		90DE4A2B1B7D412100389072 /* UIView+SHAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A281B7D412100389072 /* UIView+SHAdditions.m */; };
+		90DE4A2F1B7D598700389072 /* profile_global_white_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A2C1B7D598700389072 /* profile_global_white_image.png */; };
+		90DE4A301B7D598700389072 /* profile_lock_white_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A2D1B7D598700389072 /* profile_lock_white_image.png */; };
+		90DE4A311B7D598700389072 /* profile_person_white_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A2E1B7D598700389072 /* profile_person_white_image.png */; };
+		90DE4A331B7D74B500389072 /* profile_global_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A321B7D74B500389072 /* profile_global_image.png */; };
+		90DE4A351B7D95E100389072 /* create_video_white_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A341B7D95E100389072 /* create_video_white_button.png */; };
+		90DE4A391B7D968300389072 /* PostVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A381B7D968300389072 /* PostVideoViewController.m */; };
+		90DE4A4F1B7D9F5600389072 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A4A1B7D9F5600389072 /* SVIndefiniteAnimatedView.m */; };
+		90DE4A501B7D9F5600389072 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A4C1B7D9F5600389072 /* SVProgressHUD.bundle */; };
+		90DE4A511B7D9F5600389072 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A4E1B7D9F5600389072 /* SVProgressHUD.m */; };
 		90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F906D71B75799F003E6BC7 /* Images.xcassets */; };
 		90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906D91B75799F003E6BC7 /* THDateDay.m */; };
 		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
@@ -308,6 +320,25 @@
 		904809451B7967B000246B06 /* SBFlatDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBFlatDatePicker.m; sourceTree = "<group>"; };
 		904809461B7967B000246B06 /* SBFlatDatePickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBFlatDatePickerDelegate.h; sourceTree = "<group>"; };
 		90DE4A201B7C2E0800389072 /* plus_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_button.png; sourceTree = "<group>"; };
+		90DE4A231B7D412100389072 /* SHMultipleSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMultipleSelect.h; sourceTree = "<group>"; };
+		90DE4A241B7D412100389072 /* SHMultipleSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMultipleSelect.m; sourceTree = "<group>"; };
+		90DE4A251B7D412100389072 /* UIImage+SHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SHAdditions.h"; sourceTree = "<group>"; };
+		90DE4A261B7D412100389072 /* UIImage+SHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SHAdditions.m"; sourceTree = "<group>"; };
+		90DE4A271B7D412100389072 /* UIView+SHAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SHAdditions.h"; sourceTree = "<group>"; };
+		90DE4A281B7D412100389072 /* UIView+SHAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SHAdditions.m"; sourceTree = "<group>"; };
+		90DE4A2C1B7D598700389072 /* profile_global_white_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_global_white_image.png; sourceTree = "<group>"; };
+		90DE4A2D1B7D598700389072 /* profile_lock_white_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_lock_white_image.png; sourceTree = "<group>"; };
+		90DE4A2E1B7D598700389072 /* profile_person_white_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_person_white_image.png; sourceTree = "<group>"; };
+		90DE4A321B7D74B500389072 /* profile_global_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_global_image.png; sourceTree = "<group>"; };
+		90DE4A341B7D95E100389072 /* create_video_white_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = create_video_white_button.png; sourceTree = "<group>"; };
+		90DE4A371B7D968300389072 /* PostVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostVideoViewController.h; path = ViewControllers/PostVideoViewController/PostVideoViewController.h; sourceTree = "<group>"; };
+		90DE4A381B7D968300389072 /* PostVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostVideoViewController.m; path = ViewControllers/PostVideoViewController/PostVideoViewController.m; sourceTree = "<group>"; };
+		90DE4A491B7D9F5600389072 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		90DE4A4A1B7D9F5600389072 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		90DE4A4B1B7D9F5600389072 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		90DE4A4C1B7D9F5600389072 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		90DE4A4D1B7D9F5600389072 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		90DE4A4E1B7D9F5600389072 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		90F906D71B75799F003E6BC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90F906D81B75799F003E6BC7 /* THDateDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDateDay.h; sourceTree = "<group>"; };
 		90F906D91B75799F003E6BC7 /* THDateDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDateDay.m; sourceTree = "<group>"; };
@@ -413,6 +444,7 @@
 		90001C741B67696500E4F6D7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4A361B7D965C00389072 /* PostVideoViewController */,
 				9034AE6D1B7573040047CA79 /* PostPhotoDaytimeSelectViewController */,
 				9034AE691B7572D60047CA79 /* PostPhotoDaytimeViewController */,
 				9034ACBD1B7559830047CA79 /* PostPhotoViewController */,
@@ -498,6 +530,8 @@
 		901807CB1B6F7D0300AFF0A2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4A481B7D9F5600389072 /* SVProgressHUD */,
+				90DE4A221B7D412100389072 /* SHMultipleSelect */,
 				904809431B7967B000246B06 /* SBFlatDatePicker */,
 				90F906D61B75799F003E6BC7 /* THCalendarDatePicker */,
 				9034AE8F1B75778D0047CA79 /* KNSemiModalViewController */,
@@ -545,6 +579,10 @@
 		9034AA491B73100D0047CA79 /* profileView */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4A2C1B7D598700389072 /* profile_global_white_image.png */,
+				90DE4A321B7D74B500389072 /* profile_global_image.png */,
+				90DE4A2D1B7D598700389072 /* profile_lock_white_image.png */,
+				90DE4A2E1B7D598700389072 /* profile_person_white_image.png */,
 				901807C71B6F75DA00AFF0A2 /* profile_image_back.png */,
 				901807C81B6F75DA00AFF0A2 /* profile_image_default.png */,
 				9034A9FA1B71A73F0047CA79 /* profile_age_image.png */,
@@ -634,6 +672,7 @@
 		9034AA4D1B73134C0047CA79 /* CreatePost */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4A341B7D95E100389072 /* create_video_white_button.png */,
 				9034AA911B741CF20047CA79 /* create_white_location_image.png */,
 				9034AA861B73ED8A0047CA79 /* create_global_image.png */,
 				9034AA841B73EB5C0047CA79 /* create_location_image.png */,
@@ -784,6 +823,43 @@
 			path = Friend;
 			sourceTree = "<group>";
 		};
+		90DE4A221B7D412100389072 /* SHMultipleSelect */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4A231B7D412100389072 /* SHMultipleSelect.h */,
+				90DE4A241B7D412100389072 /* SHMultipleSelect.m */,
+				90DE4A251B7D412100389072 /* UIImage+SHAdditions.h */,
+				90DE4A261B7D412100389072 /* UIImage+SHAdditions.m */,
+				90DE4A271B7D412100389072 /* UIView+SHAdditions.h */,
+				90DE4A281B7D412100389072 /* UIView+SHAdditions.m */,
+			);
+			name = SHMultipleSelect;
+			path = Libraries/SHMultipleSelect;
+			sourceTree = "<group>";
+		};
+		90DE4A361B7D965C00389072 /* PostVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4A371B7D968300389072 /* PostVideoViewController.h */,
+				90DE4A381B7D968300389072 /* PostVideoViewController.m */,
+			);
+			name = PostVideoViewController;
+			sourceTree = "<group>";
+		};
+		90DE4A481B7D9F5600389072 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4A491B7D9F5600389072 /* SVIndefiniteAnimatedView.h */,
+				90DE4A4A1B7D9F5600389072 /* SVIndefiniteAnimatedView.m */,
+				90DE4A4B1B7D9F5600389072 /* SVProgressHUD-Prefix.pch */,
+				90DE4A4C1B7D9F5600389072 /* SVProgressHUD.bundle */,
+				90DE4A4D1B7D9F5600389072 /* SVProgressHUD.h */,
+				90DE4A4E1B7D9F5600389072 /* SVProgressHUD.m */,
+			);
+			name = SVProgressHUD;
+			path = Libraries/SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		90F906D61B75799F003E6BC7 /* THCalendarDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -859,6 +935,7 @@
 			files = (
 				9034AA251B71A73F0047CA79 /* profile_like_image.png in Resources */,
 				9034AA731B73134C0047CA79 /* create_takevideo_button.png in Resources */,
+				90DE4A331B7D74B500389072 /* profile_global_image.png in Resources */,
 				9034AA751B73134C0047CA79 /* create_video_button.png in Resources */,
 				9034AA711B73134C0047CA79 /* create_tag_image.png in Resources */,
 				90001C851B6780A100E4F6D7 /* back_btn.png in Resources */,
@@ -879,6 +956,7 @@
 				9034AA181B71A73F0047CA79 /* profile_age_image.png in Resources */,
 				9034AA691B73134C0047CA79 /* create_icon_privacy.png in Resources */,
 				9034AA411B71D8C00047CA79 /* profile_baby_background.png in Resources */,
+				90DE4A2F1B7D598700389072 /* profile_global_white_image.png in Resources */,
 				9034AA261B71A73F0047CA79 /* profile_location_image.png in Resources */,
 				9034AA621B73134C0047CA79 /* create_add_photo_button.png in Resources */,
 				90001C7B1B6774E200E4F6D7 /* login_phone_countrynum.png in Resources */,
@@ -886,6 +964,7 @@
 				9034AA321B71A73F0047CA79 /* profile_tree_btn.png in Resources */,
 				9034AA681B73134C0047CA79 /* create_fill_button.png in Resources */,
 				9034AA6C1B73134C0047CA79 /* create_photo_button.png in Resources */,
+				90DE4A351B7D95E100389072 /* create_video_white_button.png in Resources */,
 				9034AA921B741CF20047CA79 /* create_white_location_image.png in Resources */,
 				90F906E21B75799F003E6BC7 /* THDatePickerViewController.xib in Resources */,
 				9034AA701B73134C0047CA79 /* create_selecttime_gray_image.png in Resources */,
@@ -914,6 +993,7 @@
 				90001C721B66BADD00E4F6D7 /* verify_btn.png in Resources */,
 				90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */,
 				9034AA271B71A73F0047CA79 /* profile_lock_image.png in Resources */,
+				90DE4A311B7D598700389072 /* profile_person_white_image.png in Resources */,
 				9034AA231B71A73F0047CA79 /* profile_image_back.png in Resources */,
 				9034AA351B71A73F0047CA79 /* profile_weibo_btn.png in Resources */,
 				9034AA281B71A73F0047CA79 /* profile_menu_global.png in Resources */,
@@ -928,8 +1008,10 @@
 				9034AA651B73134C0047CA79 /* create_cameraroll_button.png in Resources */,
 				90001C731B66BADD00E4F6D7 /* verify_nav_bar.png in Resources */,
 				90001C3E1B66B8BF00E4F6D7 /* LaunchScreen.xib in Resources */,
+				90DE4A501B7D9F5600389072 /* SVProgressHUD.bundle in Resources */,
 				90001C6B1B66BADD00E4F6D7 /* login_nav_bar.png in Resources */,
 				90001C691B66BADD00E4F6D7 /* login_divide_bar.png in Resources */,
+				90DE4A301B7D598700389072 /* profile_lock_white_image.png in Resources */,
 				9034AA1D1B71A73F0047CA79 /* profile_checkbtn_fill.png in Resources */,
 				90001C6C1B66BADD00E4F6D7 /* login_wechat_btn.png in Resources */,
 				9034AA741B73134C0047CA79 /* create_text_button.png in Resources */,
@@ -974,6 +1056,7 @@
 				90001C361B66B8BE00E4F6D7 /* ViewController.m in Sources */,
 				90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */,
 				9034AA8B1B7409820047CA79 /* PostSearchLocationViewController.m in Sources */,
+				90DE4A2B1B7D412100389072 /* UIView+SHAdditions.m in Sources */,
 				90001C831B67802C00E4F6D7 /* ForgotViewController.m in Sources */,
 				90F906E11B75799F003E6BC7 /* THDatePickerViewController.m in Sources */,
 				9034AAAC1B7509E20047CA79 /* UzysGroupViewCell.m in Sources */,
@@ -981,6 +1064,9 @@
 				9034AA481B721ED60047CA79 /* GrowthRecordViewCell.m in Sources */,
 				9034AAA51B7509E20047CA79 /* UIImage+UzysExtension.m in Sources */,
 				9034AAAB1B7509E20047CA79 /* UzysGroupPickerView.m in Sources */,
+				90DE4A4F1B7D9F5600389072 /* SVIndefiniteAnimatedView.m in Sources */,
+				90DE4A291B7D412100389072 /* SHMultipleSelect.m in Sources */,
+				90DE4A2A1B7D412100389072 /* UIImage+SHAdditions.m in Sources */,
 				90001C331B66B8BE00E4F6D7 /* AppDelegate.m in Sources */,
 				9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */,
 				9034AA7B1B73BECA0047CA79 /* PostOptionViewController.m in Sources */,
@@ -992,7 +1078,9 @@
 				9034AA451B721E8B0047CA79 /* GrowthRecordViewController.m in Sources */,
 				9034AE6C1B7572F90047CA79 /* PostPhotoDaytimeViewController.m in Sources */,
 				9034AAA81B7509E20047CA79 /* UzysAssetsPickerController.m in Sources */,
+				90DE4A511B7D9F5600389072 /* SVProgressHUD.m in Sources */,
 				90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */,
+				90DE4A391B7D968300389072 /* PostVideoViewController.m in Sources */,
 				9034AE701B7573280047CA79 /* PostPhotoDaytimeSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

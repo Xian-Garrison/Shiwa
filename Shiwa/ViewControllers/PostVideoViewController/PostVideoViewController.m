@@ -1,43 +1,41 @@
 //
-//  PhostPhotoViewController.m
+//  PostVideoViewController.m
 //  Shiwa
 //
-//  Created by Xian on 8/8/15.
+//  Created by Xian on 8/14/15.
 //  Copyright (c) 2015 Xian. All rights reserved.
 //
 
-#import "PhostPhotoViewController.h"
+#import "PostVideoViewController.h"
 #import "PostSearchLocationViewController.h"
 #import "UzysAssetsPickerController.h"
 
-
-@interface PhostPhotoViewController ()
+@interface PostVideoViewController ()
 
 @end
 
-@implementation PhostPhotoViewController
+@implementation PostVideoViewController
 {
     BOOL bActivated;
-    int photoNumber;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    //to change the status bar color to white
     [self setNeedsStatusBarAppearanceUpdate];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(recvData:)
-                                                 name:@"SecVCPopped"
-                                               object:nil];
-
     //keyboard
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(recvData:)
+                                                 name:@"SecVCPopped"
+                                               object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
@@ -81,8 +79,6 @@
         self.m_locationText.textColor = [UIColor colorWithRed:(158/255.f) green:(158/255.f) blue:(158/255.f) alpha:1.0];
         self.m_locationText.text = @"选择地点";
     }
-    
-    photoNumber = 3;
 }
 
 - (void) recvData:(NSNotification *) notification
@@ -97,6 +93,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+//to change the status bar color to white
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 /*
 #pragma mark - Navigation
 
@@ -107,31 +109,15 @@
 }
 */
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-- (IBAction)onLocationBtn:(id)sender {
-    [self performSegueWithIdentifier:@"photo2Location" sender:nil];
-}
-
-- (IBAction)onEditDatetimeBtn:(id)sender {
-    [self performSegueWithIdentifier:@"photo2Datetime" sender:nil];
-}
-
 - (IBAction)onBackBtn:(id)sender {
-    /*
-    UINavigationController *nav = (UINavigationController *)self.presentingViewController;
-    [self dismissViewControllerAnimated:YES completion:^ {
-        
-    }];
-    */
-    [self performSegueWithIdentifier:@"photo2Record" sender:nil];
+    [self performSegueWithIdentifier:@"video2Record" sender:nil];
 }
 
 - (IBAction)onReleaseBtn:(id)sender {
-    
+}
+
+- (IBAction)onLocationBtn:(id)sender {
+    [self performSegueWithIdentifier:@"video2Location" sender:nil];
 }
 
 - (IBAction)onCircleBtn:(id)sender {
@@ -140,7 +126,6 @@
     multipleSelect.delegate = self;
     multipleSelect.rowsCount = _dataSource.count;
     [multipleSelect show];
-  
 }
 
 - (IBAction)onEventBtn:(id)sender {
@@ -159,9 +144,41 @@
     }
 }
 
-- (IBAction)onAddBtn:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Use Your Camera", @"Select from Camera Roll", nil];
-    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+- (IBAction)onEditDatetimeBtn:(id)sender {
+    [self performSegueWithIdentifier:@"video2Datetime" sender:nil];
+}
+
+- (IBAction)onCameraBtn:(id)sender {
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
+        return;
+    }
+    
+    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
+        && [[UIImagePickerController availableMediaTypesForSourceType:
+             UIImagePickerControllerSourceTypeCamera] containsObject:(NSString *)kUTTypeImage]) {
+        
+        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeMovie, nil];
+        cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        } else if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+        }
+        
+    } else {
+        return;
+    }
+    
+    cameraUI.allowsEditing = YES;
+    cameraUI.showsCameraControls = YES;
+    cameraUI.delegate = self;
+    [cameraUI setVideoMaximumDuration:20];
+    
+    [self presentViewController:cameraUI animated:YES completion:nil];
+
 }
 
 #pragma mark - SHMultipleSelectDelegate
@@ -191,117 +208,6 @@
 
 - (NSString*)multipleSelectView:(SHMultipleSelect*)multipleSelectView titleForRowAtIndexPath:(NSIndexPath*)indexPath {
     return _dataSource[indexPath.row];
-}
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {
-        [self shouldStartCameraController];
-    } else if (buttonIndex == 1) {
-        [self shouldStartPhotoLibraryPickerController];
-    }
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-}
-
-- (BOOL)shouldStartCameraController {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera] == NO) {
-        return NO;
-    }
-    
-    UIImagePickerController *cameraUI = [[UIImagePickerController alloc] init];
-    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]
-        && [[UIImagePickerController availableMediaTypesForSourceType:
-             UIImagePickerControllerSourceTypeCamera] containsObject:(NSString *)kUTTypeImage]) {
-        
-        cameraUI.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *) kUTTypeImage, nil];
-        cameraUI.sourceType = UIImagePickerControllerSourceTypeCamera;
-        
-        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]) {
-            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceRear;
-        } else if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
-            cameraUI.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-        }
-        
-    } else {
-        return NO;
-    }
-    
-    cameraUI.allowsEditing = YES;
-    cameraUI.showsCameraControls = YES;
-    cameraUI.delegate = self;
-    
-    [self presentViewController:cameraUI animated:YES completion:nil];
-    return YES;
-}
-
-- (BOOL)shouldStartPhotoLibraryPickerController {
-#if 0
-    UzysAppearanceConfig *appearanceConfig = [[UzysAppearanceConfig alloc] init];
-    appearanceConfig.finishSelectionButtonColor = [UIColor blueColor];
-    appearanceConfig.assetsGroupSelectedImageName = @"checker.png";
-    appearanceConfig.cellSpacing = 1.0f;
-    appearanceConfig.assetsCountInALine = 5;
-    [UzysAssetsPickerController setUpAppearanceConfig:appearanceConfig];
-#endif
-    
-    UzysAssetsPickerController *picker = [[UzysAssetsPickerController alloc] init];
-    picker.delegate = self;
-    picker.maximumNumberOfSelectionVideo = 0;
-    picker.maximumNumberOfSelectionPhoto = 9;
-    [self presentViewController:picker animated:YES completion:^{
-        
-    }];
-    return YES;
-}
-
-- (IBAction)onPhotoBtn1:(id)sender {
-    if (photoNumber == 3)
-    {
-        self.m_photoButton3.hidden = YES;
-    }
-    else if (photoNumber == 2)
-    {
-        self.m_photoButton2.hidden = YES;
-    }
-    else if (photoNumber == 1)
-    {
-        self.m_photoButton1.hidden = YES;
-    }
-    photoNumber--;
-}
-
-- (IBAction)onPhotoBtn2:(id)sender {
-    if (photoNumber == 3)
-    {
-        self.m_photoButton3.hidden = YES;
-    }
-    else if (photoNumber == 2)
-    {
-        self.m_photoButton2.hidden = YES;
-    }
-    else if (photoNumber == 1)
-    {
-        self.m_photoButton1.hidden = YES;
-    }
-    photoNumber--;
-}
-
-- (IBAction)onPhotoBtn3:(id)sender {
-    if (photoNumber == 3)
-    {
-        self.m_photoButton3.hidden = YES;
-    }
-    else if (photoNumber == 2)
-    {
-        self.m_photoButton2.hidden = YES;
-    }
-    else if (photoNumber == 1)
-    {
-        self.m_photoButton1.hidden = YES;
-    }
-    photoNumber--;
 }
 
 -(void)dismissKeyboard {
@@ -340,9 +246,9 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"photo2Location"]) {
+    if ([[segue identifier] isEqualToString:@"video2Location"]) {
         PostSearchLocationViewController* postSearchLocationViewController = [segue destinationViewController];
-        postSearchLocationViewController.segueName = @"photo2Location";
+        postSearchLocationViewController.segueName = @"video2Location";
     }
 }
 @end

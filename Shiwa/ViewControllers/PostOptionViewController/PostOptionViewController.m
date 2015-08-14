@@ -11,6 +11,7 @@
 #import "UzysAssetsPickerController.h"
 #import "PhostPhotoViewController.h"
 #import "PostTextViewController.h"
+#import "SVProgressHUD.h"
 
 @interface PostOptionViewController ()
 
@@ -157,6 +158,166 @@
     
     [self presentViewController:cameraUI animated:YES completion:nil];
 }
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
+    
+    mUrlMovie = nil;
+    
+    if (CFStringCompare ((__bridge CFStringRef) mediaType, kUTTypeMovie, 0) == kCFCompareEqualTo) {
+        
+        NSURL *videoUrl=(NSURL*)[info objectForKey:UIImagePickerControllerMediaURL];
+        AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:videoUrl options:nil];
+        
+        AVAssetImageGenerator *gen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+        gen.appliesPreferredTrackTransform = YES;
+        CMTime time = CMTimeMakeWithSeconds(0.0, 600);
+        NSError *error = nil;
+        CMTime actualTime;
+        
+        CGImageRef image = [gen copyCGImageAtTime:time actualTime:&actualTime error:&error];
+        mImage = [[UIImage alloc] initWithCGImage:image];
+        CGImageRelease(image);
+        
+        // get video dimension
+        AVAssetTrack* videoTrack = [[asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0];
+        CGSize size = [videoTrack naturalSize];
+        NSLog(@"size.width = %f size.height = %f", size.width, size.height);
+        CGAffineTransform txf = [videoTrack preferredTransform];
+        NSLog(@"txf.a = %f txf.b = %f txf.c = %f txf.d = %f txf.tx = %f txf.ty = %f", txf.a, txf.b, txf.c, txf.d, txf.tx, txf.ty);
+        
+        // convert to mp4 and small dimension and orientation
+        NSArray *compatiblePresets = [AVAssetExportSession exportPresetsCompatibleWithAsset:asset];
+        
+        if ([compatiblePresets containsObject:AVAssetExportPresetMediumQuality])
+        {
+            [SVProgressHUD show];
+            
+            //Create AVMutableComposition Object.This object will hold our multiple AVMutableCompositionTrack.
+            AVMutableComposition* mixComposition = [[AVMutableComposition alloc] init];
+            
+            //VIDEO TRACK
+            AVMutableCompositionTrack *firstTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:kCMPersistentTrackID_Invalid];
+            [firstTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset.duration) ofTrack:[[asset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0] atTime:kCMTimeZero error:nil];
+            AVMutableVideoCompositionInstruction *mainInstruction = [AVMutableVideoCompositionInstruction videoCompositionInstruction];
+            mainInstruction.timeRange = CMTimeRangeMake(kCMTimeZero, asset.duration);
+            
+            //AUDIO TRACK
+            if ([[asset tracksWithMediaType:AVMediaTypeAudio] count] > 0)
+            {
+                AVMutableCompositionTrack *firstAudioTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:kCMPersistentTrackID_Invalid];
+                [firstAudioTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset.duration) ofTrack:[[asset tracksWithMediaType:AVMediaTypeAudio] objectAtIndex:0] atTime:kCMTimeZero error:nil];
+            }
+            else
+            {
+                NSLog(@"warning: video has no audio");
+            }
+            
+            //FIXING ORIENTATION//
+            AVMutableVideoCompositionLayerInstruction *firstlayerInstruction = [AVMutableVideoCompositionLayerInstruction videoCompositionLayerInstructionWithAssetTrack:firstTrack];
+            UIImageOrientation assetOrientation = UIImageOrientationUp;
+            
+            BOOL bIsAssetPortrait = NO;
+            
+            if (txf.a == 0 && txf.b == 1.0 && txf.c == -1.0 && txf.d == 0)
+            {
+                assetOrientation = UIImageOrientationRight;
+                bIsAssetPortrait = YES;
+            }
+            if (txf.a == 0 && txf.b == -1.0 && txf.c == 1.0 && txf.d == 0)
+            {
+                assetOrientation = UIImageOrientationLeft;
+                bIsAssetPortrait = YES;
+            }
+            if (txf.a == 1.0 && txf.b == 0 && txf.c == 0 && txf.d == 1.0)
+            {
+                assetOrientation = UIImageOrientationUp;
+            }
+            if (txf.a == -1.0 && txf.b == 0 && txf.c == 0 && txf.d == -1.0)
+            {
+                assetOrientation = UIImageOrientationDown;
+            }
+            
+            CGSize szVideo = videoTrack.naturalSize;
+            CGFloat fAssetScaleToFitRatio = 1;
+            
+            if (videoTrack.naturalSize.width > 960 || videoTrack.naturalSize.height > 960)
+            {
+                fAssetScaleToFitRatio = 960.0 / MAX(videoTrack.naturalSize.width, videoTrack.naturalSize.height);
+                
+                // calculate new size
+                szVideo.width *= fAssetScaleToFitRatio;
+                szVideo.height *= fAssetScaleToFitRatio;
+            }
+            
+            CGAffineTransform firstAssetScaleFactor = CGAffineTransformMakeScale(fAssetScaleToFitRatio, fAssetScaleToFitRatio);
+            if (bIsAssetPortrait)
+            {
+                [firstlayerInstruction setTransform:CGAffineTransformConcat(videoTrack.preferredTransform, firstAssetScaleFactor) atTime:kCMTimeZero];
+                
+                int nTemp = szVideo.width;
+                szVideo.width = szVideo.height;
+                szVideo.height = nTemp;
+            }
+            else
+            {
+                [firstlayerInstruction setTransform:CGAffineTransformConcat(videoTrack.preferredTransform, firstAssetScaleFactor) atTime:kCMTimeZero];
+            }
+            
+            [firstlayerInstruction setOpacity:0.0 atTime:asset.duration];
+            
+            mainInstruction.layerInstructions = [NSArray arrayWithObjects:firstlayerInstruction,nil];;
+            
+            AVMutableVideoComposition *mainCompositionInst = [AVMutableVideoComposition videoComposition];
+            mainCompositionInst.instructions = [NSArray arrayWithObject:mainInstruction];
+            mainCompositionInst.frameDuration = CMTimeMake(1, 30);
+            mainCompositionInst.renderSize = szVideo;
+            
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentsDirectory = [paths objectAtIndex:0];
+            NSString *myPathDocs = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"ShiwaVideo-%d.mp4",arc4random() % 1000]];
+            
+            NSURL *url = [NSURL fileURLWithPath:myPathDocs];
+            
+            AVAssetExportSession *exporter = [[AVAssetExportSession alloc] initWithAsset:mixComposition presetName:AVAssetExportPresetMediumQuality];
+            
+            exporter.outputURL = url;
+            exporter.outputFileType = AVFileTypeMPEG4;
+            exporter.videoComposition = mainCompositionInst;
+            exporter.shouldOptimizeForNetworkUse = YES;
+            [exporter exportAsynchronouslyWithCompletionHandler:^
+             {
+                 dispatch_async(dispatch_get_main_queue(), ^
+                                {
+                                    if (exporter.status == AVAssetExportSessionStatusCompleted)
+                                    {
+                                        [SVProgressHUD dismiss];
+                                        
+                                        mUrlMovie = url;
+                                        [self dismissViewControllerAnimated:NO completion:nil];
+                                        [self performSegueWithIdentifier:@"option2Video" sender:nil];
+                                    }
+                                    else{
+                                        [SVProgressHUD dismiss];
+                                    }
+                                });
+             }];
+        }
+        else
+        {
+            NSLog(@"Cannot process this video");
+        }
+
+    }
+    else {
+        mImage = [info objectForKey:UIImagePickerControllerEditedImage];
+        
+        [self dismissViewControllerAnimated:NO completion:nil];
+        [self performSegueWithIdentifier:@"option2Photo" sender:nil];
+    }
+}
+
 - (IBAction)onIssueBtn:(id)sender {
 //    [self performSegueWithIdentifier:@"option2Photo" sender:nil];
     

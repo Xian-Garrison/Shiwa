@@ -10,7 +10,7 @@
 
 @interface GrowthRecordViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UILabel *m_datetemperature;
-@property (strong, nonatomic) IBOutlet UIButton *m_lockButton;
+@property (strong, nonatomic) IBOutlet UIButton *m_postTypeButton;
 @property (strong, nonatomic) IBOutlet UIImageView *m_weatherImage;
 @property (strong, nonatomic) IBOutlet UIImageView *m_babyImage;
 @property (strong, nonatomic) IBOutlet UILabel *m_babyDescription;
