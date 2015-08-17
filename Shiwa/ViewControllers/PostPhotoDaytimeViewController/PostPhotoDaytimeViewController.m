@@ -23,7 +23,14 @@
                                              selector:@selector(recvData:)
                                                  name:@"SecVCPopped"
                                                object:nil];
-
+    
+    NSDate *curDate = [NSDate date];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *newDateString = [formatter stringFromDate:curDate];
+    self.m_automaticDateTime.text = newDateString;
+    
+    self.m_selectedDateTime.hidden = YES;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -35,7 +42,11 @@
 {
     NSDictionary* userInfo = notification.userInfo;
     NSString *messageTotal = [userInfo objectForKey:@"total"];
+    
+    self.m_selectedDateTime.hidden = NO;
+    [self.m_selectTimeButton setImage:[UIImage imageNamed:@"create_selecttime_fill_image.png"] forState:UIControlStateNormal];
     self.m_selectedDateTime.text = messageTotal;
+    self.m_selectedLabel.textColor = [UIColor colorWithRed:255.0f/255.0f green:255.0f/255.0f blue:255.0f/255.0f alpha:1.0f];
 }
 
 - (void)didReceiveMemoryWarning {

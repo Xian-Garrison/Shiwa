@@ -22,6 +22,7 @@
     self.curDate = [NSDate date];
     self.formatter = [[NSDateFormatter alloc] init];
     [_formatter setDateFormat:@"yyyy-MM-dd"];
+    
     [self refreshTitle];
 }
 

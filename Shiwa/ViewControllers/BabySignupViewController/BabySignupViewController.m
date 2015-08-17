@@ -238,7 +238,7 @@
 
 - (void)keyboardWillShow:(NSNotification*)notify {
     
-    [self animationView:0];
+    [self animationView:-110];
 }
 
 - (void)keyboardWillHide:(NSNotification*)notify {

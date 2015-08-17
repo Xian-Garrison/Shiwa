@@ -2894,9 +2894,6 @@
                                         <state key="normal" image="create_selecttime_fill_image.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="onSelectTimeBtn:" destination="pW3-HM-hzd" eventType="touchUpInside" id="obj-2t-lUO"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DBp-0B-qLT">
                                         <rect key="frame" x="22" y="28" width="56" height="21"/>
@@ -2905,7 +2902,7 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/07/08  10:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1zF-bq-b1z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-07-08  10:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1zF-bq-b1z">
                                         <rect key="frame" x="180" y="30" width="122" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
@@ -2918,12 +2915,22 @@
                                         <state key="normal" image="create_selecttime_gray_image.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onSelectTimeBtn:" destination="pW3-HM-hzd" eventType="touchUpInside" id="cXl-nc-IxH"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m1S-Qc-Rw2">
                                         <rect key="frame" x="22" y="74" width="56" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                         <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-07-08  10:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qj7-Ax-yjG">
+                                        <rect key="frame" x="180" y="75" width="122" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -2937,7 +2944,10 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="m_selectedDateTime" destination="1zF-bq-b1z" id="cPz-Dc-irl"/>
+                        <outlet property="m_automaticDateTime" destination="1zF-bq-b1z" id="a3r-1d-41R"/>
+                        <outlet property="m_selectTimeButton" destination="GuZ-9c-X2s" id="y0G-ZJ-Yvp"/>
+                        <outlet property="m_selectedDateTime" destination="qj7-Ax-yjG" id="aKx-Cw-5Qs"/>
+                        <outlet property="m_selectedLabel" destination="m1S-Qc-Rw2" id="BLP-3v-VN1"/>
                         <segue destination="TPj-BY-Bo7" kind="push" identifier="datetime2Select" id="l07-lh-p59"/>
                     </connections>
                 </viewController>
