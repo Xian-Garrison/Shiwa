@@ -30,6 +30,7 @@
 - (IBAction)onEventBtn:(id)sender;
 - (IBAction)onVideoBtn:(id)sender;
 - (IBAction)onPhotoBtn:(id)sender;
+- (IBAction)onEdittimeBtn:(id)sender;
 
 @property (assign) BOOL bLocationSelected;
 @end

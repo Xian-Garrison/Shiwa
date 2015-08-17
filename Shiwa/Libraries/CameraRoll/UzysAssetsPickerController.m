@@ -119,7 +119,7 @@
     UzysWrapperPickerController *picker = [[UzysWrapperPickerController alloc] init];
     //    picker.modalPresentationStyle = UIModalPresentationCurrentContext;
     picker.delegate = self;
-    picker.allowsEditing = NO;
+    picker.allowsEditing = YES;
     picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {

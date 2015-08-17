@@ -164,6 +164,13 @@
 		90DE4A721B7E3DA100389072 /* up_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4A701B7E3DA100389072 /* up_arrow.png */; };
 		90DE4A751B7E3F9D00389072 /* FriendSearchSectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A741B7E3F9D00389072 /* FriendSearchSectionViewCell.m */; };
 		90DE4A791B7E61F800389072 /* PostTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4A781B7E61F800389072 /* PostTagViewController.m */; };
+		90DE4AC81B815C4900389072 /* SGActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4ABF1B815C4900389072 /* SGActionView.m */; };
+		90DE4AC91B815C4900389072 /* SGAlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AC11B815C4900389072 /* SGAlertMenu.m */; };
+		90DE4ACA1B815C4900389072 /* SGBaseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AC31B815C4900389072 /* SGBaseMenu.m */; };
+		90DE4ACB1B815C4900389072 /* SGGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AC51B815C4900389072 /* SGGridMenu.m */; };
+		90DE4ACC1B815C4900389072 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AC71B815C4900389072 /* SGSheetMenu.m */; };
+		90DE4ACE1B815E0400389072 /* profile_like_fill_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4ACD1B815E0400389072 /* profile_like_fill_image.png */; };
+		90DE4AD21B818B6800389072 /* MKInputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AD11B818B6800389072 /* MKInputBoxView.m */; };
 		90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F906D71B75799F003E6BC7 /* Images.xcassets */; };
 		90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906D91B75799F003E6BC7 /* THDateDay.m */; };
 		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
@@ -377,6 +384,19 @@
 		90DE4A741B7E3F9D00389072 /* FriendSearchSectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendSearchSectionViewCell.m; path = ViewControllers/FriendSearchViewController/FriendSearchSectionViewCell.m; sourceTree = "<group>"; };
 		90DE4A771B7E61F800389072 /* PostTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostTagViewController.h; path = ViewControllers/PostTagViewController/PostTagViewController.h; sourceTree = "<group>"; };
 		90DE4A781B7E61F800389072 /* PostTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostTagViewController.m; path = ViewControllers/PostTagViewController/PostTagViewController.m; sourceTree = "<group>"; };
+		90DE4ABE1B815C4900389072 /* SGActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGActionView.h; sourceTree = "<group>"; };
+		90DE4ABF1B815C4900389072 /* SGActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGActionView.m; sourceTree = "<group>"; };
+		90DE4AC01B815C4900389072 /* SGAlertMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAlertMenu.h; sourceTree = "<group>"; };
+		90DE4AC11B815C4900389072 /* SGAlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAlertMenu.m; sourceTree = "<group>"; };
+		90DE4AC21B815C4900389072 /* SGBaseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBaseMenu.h; sourceTree = "<group>"; };
+		90DE4AC31B815C4900389072 /* SGBaseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBaseMenu.m; sourceTree = "<group>"; };
+		90DE4AC41B815C4900389072 /* SGGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGridMenu.h; sourceTree = "<group>"; };
+		90DE4AC51B815C4900389072 /* SGGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGridMenu.m; sourceTree = "<group>"; };
+		90DE4AC61B815C4900389072 /* SGSheetMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSheetMenu.h; sourceTree = "<group>"; };
+		90DE4AC71B815C4900389072 /* SGSheetMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSheetMenu.m; sourceTree = "<group>"; };
+		90DE4ACD1B815E0400389072 /* profile_like_fill_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_like_fill_image.png; sourceTree = "<group>"; };
+		90DE4AD01B818B6800389072 /* MKInputBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKInputBoxView.h; sourceTree = "<group>"; };
+		90DE4AD11B818B6800389072 /* MKInputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKInputBoxView.m; sourceTree = "<group>"; };
 		90F906D71B75799F003E6BC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90F906D81B75799F003E6BC7 /* THDateDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDateDay.h; sourceTree = "<group>"; };
 		90F906D91B75799F003E6BC7 /* THDateDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDateDay.m; sourceTree = "<group>"; };
@@ -570,6 +590,8 @@
 		901807CB1B6F7D0300AFF0A2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4ACF1B818B6800389072 /* MKInputBoxView */,
+				90DE4ABD1B815C4900389072 /* SGActionView */,
 				90DE4A481B7D9F5600389072 /* SVProgressHUD */,
 				90DE4A221B7D412100389072 /* SHMultipleSelect */,
 				904809431B7967B000246B06 /* SBFlatDatePicker */,
@@ -632,6 +654,7 @@
 				9034A9FD1B71A73F0047CA79 /* profile_background.png */,
 				9034A9FE1B71A73F0047CA79 /* profile_checkbtn_empty.png */,
 				9034A9FF1B71A73F0047CA79 /* profile_checkbtn_fill.png */,
+				90DE4ACD1B815E0400389072 /* profile_like_fill_image.png */,
 				9034AA001B71A73F0047CA79 /* profile_cloudy_image.png */,
 				9034AA011B71A73F0047CA79 /* profile_comment_image.png */,
 				9034AA021B71A73F0047CA79 /* profile_email_btn.png */,
@@ -935,6 +958,33 @@
 			name = PostTagViewController;
 			sourceTree = "<group>";
 		};
+		90DE4ABD1B815C4900389072 /* SGActionView */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4ABE1B815C4900389072 /* SGActionView.h */,
+				90DE4ABF1B815C4900389072 /* SGActionView.m */,
+				90DE4AC01B815C4900389072 /* SGAlertMenu.h */,
+				90DE4AC11B815C4900389072 /* SGAlertMenu.m */,
+				90DE4AC21B815C4900389072 /* SGBaseMenu.h */,
+				90DE4AC31B815C4900389072 /* SGBaseMenu.m */,
+				90DE4AC41B815C4900389072 /* SGGridMenu.h */,
+				90DE4AC51B815C4900389072 /* SGGridMenu.m */,
+				90DE4AC61B815C4900389072 /* SGSheetMenu.h */,
+				90DE4AC71B815C4900389072 /* SGSheetMenu.m */,
+			);
+			path = SGActionView;
+			sourceTree = "<group>";
+		};
+		90DE4ACF1B818B6800389072 /* MKInputBoxView */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4AD01B818B6800389072 /* MKInputBoxView.h */,
+				90DE4AD11B818B6800389072 /* MKInputBoxView.m */,
+			);
+			name = MKInputBoxView;
+			path = Libraries/MKInputBoxView;
+			sourceTree = "<group>";
+		};
 		90F906D61B75799F003E6BC7 /* THCalendarDatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1045,6 +1095,7 @@
 				9034AA681B73134C0047CA79 /* create_fill_button.png in Resources */,
 				90DE4A711B7E3DA100389072 /* down_arrow.png in Resources */,
 				9034AA6C1B73134C0047CA79 /* create_photo_button.png in Resources */,
+				90DE4ACE1B815E0400389072 /* profile_like_fill_image.png in Resources */,
 				90DE4A351B7D95E100389072 /* create_video_white_button.png in Resources */,
 				9034AA921B741CF20047CA79 /* create_white_location_image.png in Resources */,
 				90F906E21B75799F003E6BC7 /* THDatePickerViewController.xib in Resources */,
@@ -1137,12 +1188,15 @@
 				9034ACC01B7559CA0047CA79 /* PhostPhotoViewController.m in Sources */,
 				9034AE961B75778D0047CA79 /* README.md in Sources */,
 				90001C951B69019200E4F6D7 /* SignupVerifyViewController.m in Sources */,
+				90DE4ACB1B815C4900389072 /* SGGridMenu.m in Sources */,
 				9034AAAA1B7509E20047CA79 /* UzysAssetsViewCell.m in Sources */,
 				9034AAA61B7509E20047CA79 /* UzysAppearanceConfig.m in Sources */,
 				9034AAAD1B7509E20047CA79 /* UzysWrapperPickerController.m in Sources */,
 				9034AE951B75778D0047CA79 /* NSObject+YMOptionsAndDefaults.m in Sources */,
 				90DE4A6E1B7E3A0900389072 /* FriendSearchViewCell.m in Sources */,
 				90001C361B66B8BE00E4F6D7 /* ViewController.m in Sources */,
+				90DE4AC81B815C4900389072 /* SGActionView.m in Sources */,
+				90DE4AD21B818B6800389072 /* MKInputBoxView.m in Sources */,
 				90001C891B67826600E4F6D7 /* ForgotVerifyViewController.m in Sources */,
 				9034AA8B1B7409820047CA79 /* PostSearchLocationViewController.m in Sources */,
 				90DE4A2B1B7D412100389072 /* UIView+SHAdditions.m in Sources */,
@@ -1156,9 +1210,12 @@
 				9034AAAB1B7509E20047CA79 /* UzysGroupPickerView.m in Sources */,
 				90DE4A751B7E3F9D00389072 /* FriendSearchSectionViewCell.m in Sources */,
 				90DE4A4F1B7D9F5600389072 /* SVIndefiniteAnimatedView.m in Sources */,
+				90DE4AC91B815C4900389072 /* SGAlertMenu.m in Sources */,
+				90DE4ACA1B815C4900389072 /* SGBaseMenu.m in Sources */,
 				90DE4A291B7D412100389072 /* SHMultipleSelect.m in Sources */,
 				90DE4A2A1B7D412100389072 /* UIImage+SHAdditions.m in Sources */,
 				90001C331B66B8BE00E4F6D7 /* AppDelegate.m in Sources */,
+				90DE4ACC1B815C4900389072 /* SGSheetMenu.m in Sources */,
 				9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */,
 				9034AA7B1B73BECA0047CA79 /* PostOptionViewController.m in Sources */,
 				90001C8D1B68F2C700E4F6D7 /* SignupViewController.m in Sources */,

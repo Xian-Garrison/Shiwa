@@ -26,5 +26,4 @@
 - (IBAction)onPhotoBtn:(id)sender;
 - (IBAction)onBackPhotoBtn:(id)sender;
 
-
 @end

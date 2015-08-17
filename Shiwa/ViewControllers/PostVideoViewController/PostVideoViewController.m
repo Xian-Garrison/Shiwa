@@ -172,7 +172,7 @@
         return;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     [cameraUI setVideoMaximumDuration:20];

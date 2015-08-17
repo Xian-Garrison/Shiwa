@@ -308,7 +308,7 @@
         return NO;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     
@@ -340,7 +340,7 @@
         return NO;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.delegate = self;
     
     
@@ -352,7 +352,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    UIImage *image=[info objectForKey:UIImagePickerControllerEditedImage];
+    UIImage *image=[info objectForKey:UIImagePickerControllerOriginalImage];
     [self.m_photoButton setImage:image forState:UIControlStateNormal];
     [self.m_photoButton setImageEdgeInsets:UIEdgeInsetsMake(3,3,3,3)];
     [self dismissViewControllerAnimated:YES completion:nil];

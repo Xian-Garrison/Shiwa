@@ -26,6 +26,10 @@
     //to change the status bar color to white
     [self setNeedsStatusBarAppearanceUpdate];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(recvData:)
+                                                 name:@"SecVCPopped"
+                                               object:nil];
     //keyboard
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -75,6 +79,13 @@
         self.m_locationText.textColor = [UIColor colorWithRed:(158/255.f) green:(158/255.f) blue:(158/255.f) alpha:1.0];
         self.m_locationText.text = @"选择地点";
     }
+}
+
+- (void) recvData:(NSNotification *) notification
+{
+    NSDictionary* userInfo = notification.userInfo;
+    NSString *messageTotal = [userInfo objectForKey:@"total"];
+    self.m_postDatetime.text = messageTotal;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -127,6 +138,10 @@
         [self.m_eventButton setImage:btnImage forState:UIControlStateNormal];
         self.m_eventLabel.textColor = [UIColor colorWithRed:(189/255.f) green:(189/255.f) blue:(189/255.f) alpha:1.0];
     }
+}
+
+- (IBAction)onEdittimeBtn:(id)sender {
+    [self performSegueWithIdentifier:@"text2Datetime" sender:nil];
 }
 
 #pragma mark - SHMultipleSelectDelegate

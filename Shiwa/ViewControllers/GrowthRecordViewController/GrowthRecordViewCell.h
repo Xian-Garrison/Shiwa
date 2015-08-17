@@ -17,5 +17,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *m_postTime;
 @property (strong, nonatomic) IBOutlet UILabel *m_postPlace;
 @property (strong, nonatomic) IBOutlet UIButton *m_postButton;
+@property (strong, nonatomic) IBOutlet UIButton *m_commentButton;
+@property (strong, nonatomic) IBOutlet UIButton *m_likeButton;
+@property (strong, nonatomic) IBOutlet UIImageView *m_likeImage;
 
 @end

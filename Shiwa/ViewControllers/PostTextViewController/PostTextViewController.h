@@ -32,6 +32,7 @@
 - (IBAction)onLocationBtn:(id)sender;
 - (IBAction)onCircleBtn:(id)sender;
 - (IBAction)onEventBtn:(id)sender;
+- (IBAction)onEdittimeBtn:(id)sender;
 
 @property (assign)  BOOL bLocationSelected;
 @end

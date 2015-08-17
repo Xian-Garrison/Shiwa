@@ -228,7 +228,7 @@
         return NO;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     

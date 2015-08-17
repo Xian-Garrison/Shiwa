@@ -121,7 +121,7 @@
         <scene sceneID="gzi-C4-jew">
             <objects>
                 <viewController storyboardIdentifier="PostOptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3nI-Gi-m1G" customClass="PostOptionViewController" sceneMemberID="viewController">
-                    <view key="view" alpha="0.40000000000000002" contentMode="scaleToFill" id="Yuy-Rn-BD8">
+                    <view key="view" contentMode="scaleToFill" id="Yuy-Rn-BD8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1554,7 +1554,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_like_image.png" id="U7t-is-x3x">
-                                                    <rect key="frame" x="241" y="238" width="23" height="23"/>
+                                                    <rect key="frame" x="241" y="241" width="18" height="16"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZUN-1R-hpl">
@@ -1571,7 +1571,10 @@
                                         <connections>
                                             <outlet property="m_babyDescription" destination="o7A-mJ-E7A" id="f3r-CE-hSu"/>
                                             <outlet property="m_babyImage" destination="HfP-HZ-Zjw" id="eH1-oW-mdB"/>
+                                            <outlet property="m_commentButton" destination="kfW-93-pV3" id="VVa-Ee-uf8"/>
                                             <outlet property="m_datetemperature" destination="fDX-Rh-ReU" id="4BH-xV-tbR"/>
+                                            <outlet property="m_likeButton" destination="dEL-iP-N9u" id="phB-HA-07A"/>
+                                            <outlet property="m_likeImage" destination="U7t-is-x3x" id="BiO-ha-aNa"/>
                                             <outlet property="m_postButton" destination="fbV-4v-seZ" id="P9H-hZ-Rby"/>
                                             <outlet property="m_postPlace" destination="AUV-ZS-FXM" id="lHw-Db-lKk"/>
                                             <outlet property="m_postTime" destination="E2O-4j-1nY" id="3B0-DS-6ph"/>
@@ -2050,7 +2053,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/07/08  10:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gjs-4B-bBh">
-                                        <rect key="frame" x="195" y="225" width="103" height="21"/>
+                                        <rect key="frame" x="184" y="225" width="103" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="12"/>
                                         <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2064,6 +2067,16 @@
                                         </state>
                                         <connections>
                                             <action selector="onEventBtn:" destination="zKJ-jX-7pm" eventType="touchUpInside" id="6Td-IO-HAy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dPV-SU-QHq" userLabel="Back">
+                                        <rect key="frame" x="287" y="223" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_edit_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onEdittimeBtn:" destination="zKJ-jX-7pm" eventType="touchUpInside" id="aJp-7W-rNJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2090,6 +2103,7 @@
                         <outlet property="m_releaseButton" destination="eWj-na-8vK" id="RqX-yP-m7R"/>
                         <segue destination="Nbo-RA-s00" kind="push" identifier="text2Location" id="HSt-cN-uJp"/>
                         <segue destination="41L-c3-zfu" kind="push" identifier="text2Record" id="Yfj-Er-rsW"/>
+                        <segue destination="pW3-HM-hzd" kind="push" identifier="text2Datetime" id="ov0-qH-8c6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgs-0n-fO9" sceneMemberID="firstResponder"/>
@@ -2534,7 +2548,7 @@
                                             <action selector="onBackBtn:" destination="9xg-DD-sGZ" eventType="touchUpInside" id="hxb-tm-SV4"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日记" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7cz-Rb-1j4">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="发起话题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7cz-Rb-1j4">
                                         <rect key="frame" x="128" y="27" width="65" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="15"/>
@@ -2644,6 +2658,16 @@
                                         <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hyf-z6-rGJ" userLabel="Back">
+                                        <rect key="frame" x="287" y="297" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="create_edit_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onEdittimeBtn:" destination="9xg-DD-sGZ" eventType="touchUpInside" id="S0Y-ZL-BST"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="y5t-YF-k7V" userLabel="Back">
                                         <rect key="frame" x="20" y="297" width="26" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2711,6 +2735,7 @@
                         <outlet property="m_releasebutton" destination="5sY-qh-18G" id="15e-Jq-v8C"/>
                         <segue destination="Nbo-RA-s00" kind="push" identifier="tag2Location" id="Q27-U4-BzS"/>
                         <segue destination="41L-c3-zfu" kind="push" identifier="tag2Record" id="sib-Ok-Cto"/>
+                        <segue destination="pW3-HM-hzd" kind="push" identifier="tag2Datetime" id="EbM-D9-U2s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yyg-XN-UEc" sceneMemberID="firstResponder"/>
@@ -2863,22 +2888,8 @@
                                 <rect key="frame" x="0.0" y="55" width="320" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AYn-SV-nSh">
-                                        <rect key="frame" x="11" y="20" width="299" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="create_selecttime_gray_image.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大事件" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qoQ-d6-sxO">
-                                        <rect key="frame" x="22" y="28" width="44" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
-                                        <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2xM-Et-GNp">
-                                        <rect key="frame" x="11" y="66" width="299" height="38"/>
+                                        <rect key="frame" x="11" y="20" width="299" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="create_selecttime_fill_image.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -2888,38 +2899,31 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DBp-0B-qLT">
-                                        <rect key="frame" x="22" y="74" width="56" height="21"/>
+                                        <rect key="frame" x="22" y="28" width="56" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015/07/08  10:12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1zF-bq-b1z">
-                                        <rect key="frame" x="180" y="76" width="122" height="20"/>
+                                        <rect key="frame" x="180" y="30" width="122" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GuZ-9c-X2s">
-                                        <rect key="frame" x="11" y="112" width="299" height="38"/>
+                                        <rect key="frame" x="11" y="66" width="299" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="create_selecttime_gray_image.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自定时间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m1S-Qc-Rw2">
-                                        <rect key="frame" x="22" y="120" width="56" height="21"/>
+                                        <rect key="frame" x="22" y="74" width="56" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
                                         <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2014-03-21 11:20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VJF-cE-woP">
-                                        <rect key="frame" x="180" y="30" width="122" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
-                                        <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -3089,7 +3093,7 @@
         <image name="profile_forward_image.png" width="28" height="28"/>
         <image name="profile_global_white_image.png" width="16" height="16"/>
         <image name="profile_image_default.png" width="130" height="130"/>
-        <image name="profile_like_image.png" width="28" height="28"/>
+        <image name="profile_like_image.png" width="20" height="17"/>
         <image name="profile_location_image.png" width="20" height="20"/>
         <image name="profile_lock_image.png" width="30" height="30"/>
         <image name="profile_rain_image.png" width="22" height="22"/>
@@ -3114,11 +3118,11 @@
         <segue reference="yqO-vK-XkD"/>
         <segue reference="lKN-5m-Id3"/>
         <segue reference="a0G-Uc-PG9"/>
+        <segue reference="ORV-Xq-AY9"/>
+        <segue reference="M9c-B6-lLf"/>
         <segue reference="fpM-mn-Xbf"/>
         <segue reference="Q27-U4-BzS"/>
-        <segue reference="usn-2i-B4H"/>
-        <segue reference="DiK-QO-bq0"/>
-        <segue reference="Elo-nB-k4M"/>
+        <segue reference="EbM-D9-U2s"/>
         <segue reference="sib-Ok-Cto"/>
     </inferredMetricsTieBreakers>
 </document>

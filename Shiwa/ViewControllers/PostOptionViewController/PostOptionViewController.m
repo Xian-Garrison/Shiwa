@@ -119,7 +119,7 @@
         return;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     [cameraUI setVideoMaximumDuration:20];
@@ -152,7 +152,7 @@
         return;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     
@@ -311,7 +311,7 @@
 
     }
     else {
-        mImage = [info objectForKey:UIImagePickerControllerEditedImage];
+        mImage = [info objectForKey:UIImagePickerControllerOriginalImage];
         
         [self dismissViewControllerAnimated:NO completion:nil];
         [self performSegueWithIdentifier:@"option2Photo" sender:nil];

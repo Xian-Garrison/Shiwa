@@ -26,6 +26,11 @@
     //to change the status bar color to white
     [self setNeedsStatusBarAppearanceUpdate];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(recvData:)
+                                                 name:@"SecVCPopped"
+                                               object:nil];
+    
     //keyboard
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -153,7 +158,7 @@
         return;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     [cameraUI setVideoMaximumDuration:20];
@@ -185,11 +190,15 @@
         return;
     }
     
-    cameraUI.allowsEditing = YES;
+    cameraUI.allowsEditing = NO;
     cameraUI.showsCameraControls = YES;
     cameraUI.delegate = self;
     
     [self presentViewController:cameraUI animated:YES completion:nil];
+}
+
+- (IBAction)onEdittimeBtn:(id)sender {
+    [self performSegueWithIdentifier:@"tag2Datetime" sender:nil];
 }
 
 -(void)dismissKeyboard {
