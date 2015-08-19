@@ -171,6 +171,11 @@
 		90DE4ACC1B815C4900389072 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AC71B815C4900389072 /* SGSheetMenu.m */; };
 		90DE4ACE1B815E0400389072 /* profile_like_fill_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4ACD1B815E0400389072 /* profile_like_fill_image.png */; };
 		90DE4AD21B818B6800389072 /* MKInputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AD11B818B6800389072 /* MKInputBoxView.m */; };
+		90DE4AD61B83C29C00389072 /* CNPPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4AD51B83C29C00389072 /* CNPPopupController.m */; };
+		90DE4ADA1B83C57800389072 /* popup_back_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4AD71B83C57800389072 /* popup_back_image.png */; };
+		90DE4ADB1B83C57800389072 /* popup_chat_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4AD81B83C57800389072 /* popup_chat_button.png */; };
+		90DE4ADC1B83C57800389072 /* popup_diary_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DE4AD91B83C57800389072 /* popup_diary_button.png */; };
+		90DE4AE01B8418E200389072 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4ADF1B8418E200389072 /* KxMenu.m */; };
 		90F906DE1B75799F003E6BC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90F906D71B75799F003E6BC7 /* Images.xcassets */; };
 		90F906DF1B75799F003E6BC7 /* THDateDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F906D91B75799F003E6BC7 /* THDateDay.m */; };
 		90F906E01B75799F003E6BC7 /* THDateDay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F906DA1B75799F003E6BC7 /* THDateDay.xib */; };
@@ -397,6 +402,13 @@
 		90DE4ACD1B815E0400389072 /* profile_like_fill_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_like_fill_image.png; sourceTree = "<group>"; };
 		90DE4AD01B818B6800389072 /* MKInputBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKInputBoxView.h; sourceTree = "<group>"; };
 		90DE4AD11B818B6800389072 /* MKInputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKInputBoxView.m; sourceTree = "<group>"; };
+		90DE4AD41B83C29C00389072 /* CNPPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNPPopupController.h; sourceTree = "<group>"; };
+		90DE4AD51B83C29C00389072 /* CNPPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNPPopupController.m; sourceTree = "<group>"; };
+		90DE4AD71B83C57800389072 /* popup_back_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup_back_image.png; sourceTree = "<group>"; };
+		90DE4AD81B83C57800389072 /* popup_chat_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup_chat_button.png; sourceTree = "<group>"; };
+		90DE4AD91B83C57800389072 /* popup_diary_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popup_diary_button.png; sourceTree = "<group>"; };
+		90DE4ADE1B8418E200389072 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		90DE4ADF1B8418E200389072 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 		90F906D71B75799F003E6BC7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		90F906D81B75799F003E6BC7 /* THDateDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THDateDay.h; sourceTree = "<group>"; };
 		90F906D91B75799F003E6BC7 /* THDateDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THDateDay.m; sourceTree = "<group>"; };
@@ -590,6 +602,8 @@
 		901807CB1B6F7D0300AFF0A2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				90DE4ADD1B8418E200389072 /* KXMenu */,
+				90DE4AD31B83C29C00389072 /* CNPPopupController */,
 				90DE4ACF1B818B6800389072 /* MKInputBoxView */,
 				90DE4ABD1B815C4900389072 /* SGActionView */,
 				90DE4A481B7D9F5600389072 /* SVProgressHUD */,
@@ -889,6 +903,9 @@
 				90DE4A551B7E38BE00389072 /* group_invite_button.png */,
 				90DE4A561B7E38BE00389072 /* invite_button.png */,
 				90DE4A571B7E38BE00389072 /* new_friend_icon.png */,
+				90DE4AD71B83C57800389072 /* popup_back_image.png */,
+				90DE4AD81B83C57800389072 /* popup_chat_button.png */,
+				90DE4AD91B83C57800389072 /* popup_diary_button.png */,
 				90DE4A581B7E38BE00389072 /* red_circle_image.png */,
 				90DE4A591B7E38BE00389072 /* signout_button.png */,
 				90DE4A5A1B7E38BE00389072 /* tick_button.png */,
@@ -983,6 +1000,26 @@
 			);
 			name = MKInputBoxView;
 			path = Libraries/MKInputBoxView;
+			sourceTree = "<group>";
+		};
+		90DE4AD31B83C29C00389072 /* CNPPopupController */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4AD41B83C29C00389072 /* CNPPopupController.h */,
+				90DE4AD51B83C29C00389072 /* CNPPopupController.m */,
+			);
+			name = CNPPopupController;
+			path = Libraries/CNPPopupController;
+			sourceTree = "<group>";
+		};
+		90DE4ADD1B8418E200389072 /* KXMenu */ = {
+			isa = PBXGroup;
+			children = (
+				90DE4ADE1B8418E200389072 /* KxMenu.h */,
+				90DE4ADF1B8418E200389072 /* KxMenu.m */,
+			);
+			name = KXMenu;
+			path = Libraries/KXMenu;
 			sourceTree = "<group>";
 		};
 		90F906D61B75799F003E6BC7 /* THCalendarDatePicker */ = {
@@ -1112,6 +1149,7 @@
 				9034AA3C1B71AAB10047CA79 /* tab_plus_btn.png in Resources */,
 				90001C701B66BADD00E4F6D7 /* signup_nav_bar.png in Resources */,
 				90001C791B676A8800E4F6D7 /* Main_title.png in Resources */,
+				90DE4ADB1B83C57800389072 /* popup_chat_button.png in Resources */,
 				9034AA661B73134C0047CA79 /* create_edit_button.png in Resources */,
 				9034AA3F1B71AAB10047CA79 /* tab_relative_btn.png in Resources */,
 				9034AA211B71A73F0047CA79 /* profile_event_back.png in Resources */,
@@ -1133,6 +1171,7 @@
 				9034AA281B71A73F0047CA79 /* profile_menu_global.png in Resources */,
 				9034AA6B1B73134C0047CA79 /* create_option_image.png in Resources */,
 				9034AA3D1B71AAB10047CA79 /* tab_profile_btn.png in Resources */,
+				90DE4ADC1B83C57800389072 /* popup_diary_button.png in Resources */,
 				9034AA3B1B71AAB10047CA79 /* tab_home_btn.png in Resources */,
 				9034AA2E1B71A73F0047CA79 /* profile_seperator.png in Resources */,
 				9034AA2F1B71A73F0047CA79 /* profile_sun_image.png in Resources */,
@@ -1151,6 +1190,7 @@
 				90DE4A301B7D598700389072 /* profile_lock_white_image.png in Resources */,
 				90DE4A5D1B7E38BE00389072 /* chat_icon.png in Resources */,
 				9034AA1D1B71A73F0047CA79 /* profile_checkbtn_fill.png in Resources */,
+				90DE4ADA1B83C57800389072 /* popup_back_image.png in Resources */,
 				90001C6C1B66BADD00E4F6D7 /* login_wechat_btn.png in Resources */,
 				9034AA741B73134C0047CA79 /* create_text_button.png in Resources */,
 				901807C91B6F75DA00AFF0A2 /* profile_image_back.png in Resources */,
@@ -1213,11 +1253,13 @@
 				90DE4AC91B815C4900389072 /* SGAlertMenu.m in Sources */,
 				90DE4ACA1B815C4900389072 /* SGBaseMenu.m in Sources */,
 				90DE4A291B7D412100389072 /* SHMultipleSelect.m in Sources */,
+				90DE4AE01B8418E200389072 /* KxMenu.m in Sources */,
 				90DE4A2A1B7D412100389072 /* UIImage+SHAdditions.m in Sources */,
 				90001C331B66B8BE00E4F6D7 /* AppDelegate.m in Sources */,
 				90DE4ACC1B815C4900389072 /* SGSheetMenu.m in Sources */,
 				9034AE971B75778D0047CA79 /* UIViewController+KNSemiModal.m in Sources */,
 				9034AA7B1B73BECA0047CA79 /* PostOptionViewController.m in Sources */,
+				90DE4AD61B83C29C00389072 /* CNPPopupController.m in Sources */,
 				90001C8D1B68F2C700E4F6D7 /* SignupViewController.m in Sources */,
 				904809471B7967B000246B06 /* SBFlatDatePicker.m in Sources */,
 				90001C301B66B8BE00E4F6D7 /* main.m in Sources */,

@@ -11,4 +11,5 @@
 @interface FriendSearchViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UITableView *m_friendSearchTable;
 
+- (IBAction)onPlusBtn:(id)sender;
 @end
